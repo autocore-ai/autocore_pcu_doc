@@ -60,7 +60,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 ### MCU Software
 
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :----------- : | :----------- : |
 | Operation System| FreeRTOS 8.2  |                |                |
 | MiddleWare     | eProsima Micro XRCE-DDS|        |                |
 | GPS Driver     | NMEA Standard driver|    x      |                |
@@ -74,7 +74,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 
 ### MPU Software
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :----------- : | :----------- : |
 | Operation System| Ubuntu 18.04  |                |                |
 | Kernel         | LTS kernel 4.14|                |                |
 | MiddleWare     | ROS Melodic, ROS2 Crystal/Bouncy|      |         |
@@ -92,12 +92,12 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 
 ### Autoware Port
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :----------- : | :----------- : |
 | Planning       | Mission planner, motion planner, decision maker|  x  |     |
 
 ### Tools
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :----------- : | :----------- : |
 | v-Map          | Vector map editor|    |  x  |
 | HD Map         | Point cloud map builder|   | x |
 | Simulation     | Simulation tool and test scenarios|   | x |
