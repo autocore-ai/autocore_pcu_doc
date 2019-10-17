@@ -108,7 +108,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 ## Applications
 PCU board follows 96Boards open standard, and it is compatible with Autoware open-source autonomous driving software. It could be used in several different ways in AD/ADAS application scenarios:
 
-1. **Single board application:**
+1. **Single board application:**   
     - Central ECU for L2/L3 ADAS functions.
     - Drive-by-wire safe controller of autonomous driving vehicle.
     - Object detection and fusion based on LiDAR and radar.
