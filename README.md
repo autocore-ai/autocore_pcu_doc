@@ -78,5 +78,7 @@ With standardized hardware architecture and optimized SDK, AutoCore could suppor
 
 ### AutoCore SDK features list
 
+[AutoCore SDK Feature List](Sdk_feature_list.md)
 
 ## FAQs
+

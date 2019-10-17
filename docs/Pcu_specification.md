@@ -21,13 +21,14 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | Item           | Description   |
 | -------------  | ------------- |
 | MCU            | TI TMS570LC4357 (32-bit ARM Dual-Core Cortex-R5F) Automotive-grade micro controller |
-| MPU            | NXP LS1046A (64-bit ARM Quad-Core Cortex-V8 A72) |
+| MPU            | NXP LS1046A (64-bit ARM Quad-Core Cortex-A72) |
 | Memory         | 8GB DDR4 |
-| Storage        | 64MB QSPI NOR         64GB eMMC flash |
+| Storage        | 64MB QSPI NOR, 64GB eMMC flash, Micro SD |
 | Ethernet switch| NXP SJA1105s Automotive Ethernet Switch(5 ports) |
 | Power management| NXP advanced automotive power management IC|
 | Input Voltage  |     9-30V        | 
-| Environment    |  Operating temperature: -40°C ~ +75°C ; Storage temperature: -55°C ~ +105°C  |   
+| Environmental    |  Operating temperature: -40°C ~ +75°C ; Storage temperature: -55°C ~ +105°C  |
+| Power Source:  | DC power: +9V to +30V
 
 ## Interfaces
 | Item           | Description   |
@@ -60,7 +61,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 ### MCU Software
 
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :------------: | :------------: |
 | Operation System| FreeRTOS 8.2  |                |                |
 | MiddleWare     | eProsima Micro XRCE-DDS|        |                |
 | GPS Driver     | NMEA Standard driver|    x      |                |
@@ -74,7 +75,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 
 ### MPU Software
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :------------: | :------------: |
 | Operation System| Ubuntu 18.04  |                |                |
 | Kernel         | LTS kernel 4.14|                |                |
 | MiddleWare     | ROS Melodic, ROS2 Crystal/Bouncy|      |         |
@@ -92,12 +93,12 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 
 ### Autoware Port
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :------------: | :------------: |
 | Planning       | Mission planner, motion planner, decision maker|  x  |     |
 
 ### Tools
 | Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  |:------------- :|:------------- :|
+| -------------  | -------------  | :------------: | :------------: |
 | v-Map          | Vector map editor|    |  x  |
 | HD Map         | Point cloud map builder|   | x |
 | Simulation     | Simulation tool and test scenarios|   | x |
