@@ -6,7 +6,7 @@
 
   PCU (Perception computer unit) 1.0 Dev Board is a reference design board of high-performance domain controller for serial production in automotive industry. Based on an MCU-MPU architecture, different ADAS / AD functions can be integrated with different safety levels up to ASIL D after ISO 26262.
 
-- **CCU Dev Board**
+- **CCU Dev Board (Coming soon)**
     
   CCU (Camera computer unit) Dev Board is a high-performance hardware platform suitable for camera/vision related functions. Integrated with AI processors and a wide variety of interfaces
 

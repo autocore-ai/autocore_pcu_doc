@@ -9,7 +9,8 @@
 3. [Interfaces](#interfaces)  
 4. [Block diagram](#block-diagram)
 5. [Software](#software)
-6. [Applications](#applications)  
+6. [Applications](#applications)
+7. [User Guide](#user-guide)
 
 ## Overview
 
@@ -24,11 +25,11 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | MPU            | NXP LS1046A (64-bit ARM Quad-Core Cortex-A72) |
 | Memory         | 8GB DDR4 |
 | Storage        | 64MB QSPI NOR, 64GB eMMC flash, Micro SD |
-| Ethernet switch| NXP SJA1105s Automotive Ethernet Switch(5 ports) |
+| Ethernet switch| NXP SJA1105s Automotive Ethernet Switch(5 1000M ports) |
 | Power management| NXP advanced automotive power management IC|
 | Input Voltage  |     9-30V        | 
 | Environmental    |  Operating temperature: -40°C ~ +75°C ; Storage temperature: -55°C ~ +105°C  |
-| Power Source:  | DC power: +9V to +30V
+| Power Source:  | DC power: +9V to +30V, typical: 12V,5A |
 
 ## Interfaces
 | Item           | Description   |
@@ -128,4 +129,6 @@ PCU board follows 96Boards open standard, and it is compatible with Autoware ope
 Please go to the documentation page of AutoCore platform:
 
 [AutoCore Documentation Page](../README.md)  
+[PCU Hardware Manual](../pdf/Pcu_hardware_manual.pdf)  
+[PCU setup](Pcu_setup.md)  
 

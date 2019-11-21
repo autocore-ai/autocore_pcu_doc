@@ -8,7 +8,7 @@
 
 AutoCore is a modularized, flexible, and heterogeneous platform which simplifies the development, testing, and deployment of Autonomous Driving Technology. With automotive grade hardware and built-in safety mechanisms, this system is suitable for testing, demonstration or series production with minimized effort.
 
-> We put real intelligence in every car. Because in our mind, autonomous driving is not only for selected few, but everyone.
+> We put real intelligence in every car. Because in our mind, autonomous driving is not only for selected few, but everyone.  
  --- The AutoCore People
 
 For business and partnership, please visit our website: [www.autocore.ai](http://www.autocore.ai "AutoCore Homepage").
@@ -55,15 +55,15 @@ With standardized hardware architecture and optimized SDK, AutoCore could suppor
 
 1. [Hardware setup](docs/Hardware_setup.md "Hardware setup") -A customer guide for setting up AutoCore hardware components.
 
-2. [Software installation](docs/Software_installation.md)  -Steps to install the the system software of AutoCore.
+2. [PCU setup](docs/Pcu_setup.md "PCU setup") - Instruction of how to set up AutoCore PCU dev board.
 
-3. [AutoCore SDK usage guide](docs/Sdk_guide.md) -AutoCore SDK usage manual.
+3. [PCU SDK installation](docs/Sdk_installation.md)  -Steps to install the the SDK package of AutoCore.
 
-4. [Run a demo bag](docs/Demo_bag.md "Software Installation") -A short demonstration using pre-recorded rosbag data for you to get familiar with AutoCore.
+4. [PCU SDK usage guide](docs/Sdk_guide.md) -AutoCore SDK usage manual.
 
 5. [Simulation guide](docs/Simulation.md) -Test run AutoCore in simulation environment with simulation tool.
 
-6. [Field test guide](docs/Test_guide.md) -To setup test vehicle and run a simple field test.
+6. [Vehicle test guide](docs/Vehicle_test_guide.md) -To setup test vehicle and run a simple field test.
 
 
 ## Technical Specifications
