@@ -20,17 +20,17 @@ To get the full feature list of these packages, please go to: [SDK feature list]
 
 - **Ubuntu 18.04, ROS Melodic**
 
-| Version | Type |  Notes | Link |
-| :----: | :----: | --------- | ---- |
-| **0.0.1** <br> 30/Oct/2019 | Arm64 | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
-| **0.0.1** <br> 30/Oct/2019 | Amd64 | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
+|      Version               | Type   |  Notes    | Link |
+| :------------------------: | :----: | --------- | ---- |
+| **0.0.1** <br> 30/Oct/2019 | Arm64  | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
+| **0.0.1** <br> 30/Oct/2019 | Amd64  | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
 
 - **Ubuntu 16.04, ROS Kinetic**
 
-| Version | Type |  Notes | Link |
-| :----: | :----: | --------- | ---- |
-|  **0.1.1** <br> 30/Oct/2019 |Arm64 | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
-|  **0.1.1** <br> 30/Oct/2019 |Amd64 | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
+|      Version               | Type   |  Notes    | Link |
+| :------------------------: | :----: | --------- | ---- |
+| **0.1.1** <br> 30/Oct/2019 | Arm64  | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
+| **0.1.1** <br> 30/Oct/2019 | Amd64  | 1. Initial version <br> 2. Modules: Lidar detection, tracking, localization| Please contact AutoCore by support@autocore.ai |
 
 #### MCU SDK
 
@@ -38,6 +38,17 @@ Will be available soon.
 
 ### AutoCore IDE tool
 
+|      Version               | Type   |  Notes    | Link |
+| :------------------------: | :----: | --------- | ---- |
+| **0.1.43** <br> 16/Dec/2019 | Linux  | Runtime vesionr must greater than 1.0.5 | Please contact AutoCore by support@autocore.ai |
+| **0.1.43** <br> 16/Dec/2019 | Windows| Runtime vesionr must greater than 1.0.5 | Please contact AutoCore by support@autocore.ai |
+| **0.1.40** <br> 12/Dec/2019 | Linux  | Runtime vesionr must greater than 1.0.5 | Please contact AutoCore by support@autocore.ai |
+| **0.1.40** <br> 12/Dec/2019 | Windows| Runtime vesionr must greater than 1.0.5 | Please contact AutoCore by support@autocore.ai |
+
+### Simulation
+
+Will be available soon.
 
 ### Map resources
 
+Will be available soon.
