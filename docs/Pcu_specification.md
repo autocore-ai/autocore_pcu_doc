@@ -61,52 +61,45 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 
 ### MCU Software
 
-| Item           | Description                     |  System image  | Reference Code | AutoCore SDK   |
-| -------------  | -------------                   | :------------: | :------------: | :------------: |
-| Operation System| FreeRTOS 8.2                   |        x       |                |                |
-| MiddleWare     | Micro XRCE-DDS                  |        x       |                |                |
-| GNSS Driver    | NMEA Standard driver            |        x       |                |                |
-| IMU Driver     | Xsens IMUs driver               |        x       |                |                |
-| Radar          | Continental ARS408/208 driver   |        x       |                |                |
-| Ultrasonic     | Ultrasonic sensor driver        |                |        x       |                |
-| Time service   | Time service                    |        x       |                |                |
-| Vehicle info   | Vehicle information from CAN    |                |        x       |                |
-| Vehicle DBW    | Vehicle drive-by-wire CAN interface|             |        x       |                |
-| Runtime framework| AutoCore runtime framework    |                |                |        x       |
+| Item           | Description                     |  System image  | Open Source | AutoCore SDK   |
+| -------------  | -------------                   | :------------: | :---------: | :------------: |
+| Operation System| FreeRTOS 8.2                   |        x       |      x      |                |
+| MiddleWare     | eProsima Micro XRCE-DDS         |        x       |             |                |
+| GNSS Driver    | NMEA Standard driver            |        x       |             |                |
+| IMU Driver     | Xsens IMUs driver               |        x       |             |                |
+| Radar          | Continental ARS408/208 driver   |        x       |             |                |
+| Ultrasonic     | Ultrasonic sensor driver        |                |             |                |
+| Time service   | Time service                    |        x       |             |                |
+| Vehicle info   | Vehicle information from CAN    |                |             |        x       |
+| Vehicle DBW    | Vehicle drive-by-wire CAN interface|             |             |        x       |
+| Runtime framework| AutoCore runtime framework    |                |             |        x       |
 
 ### MPU Software
-| Item           | Description                     |  System image  | Reference Code | AutoCore SDK   |
-| -------------  | -------------                   | :------------: | :------------: | :------------: |
-| Operation System| Ubuntu 18.04                   |        x       |                |                |
-| Kernel         | LTS kernel 4.14                 |        x       |                |                |
-| MiddleWare     | ROS Melodic, ROS2 Crystal/Bouncy|        x       |                |                |
-| Time service   | Time service                    |        x       |                |                |
-| PCI-E Driver   | PCI-E driver to support Accelerators |   x       |                |                |
-| LiDAR driver   | Velodyne driver, Robosense driver|       x       |                |                |
-| Camera driver  | UVC camera driver, GigE camera  |        x       |                |                |
-| Localization   | LiDAR NDT                       |                |        x       |        x       |
-| Localization   | GNSS/IMU/ODOM EKF fusion        |                |        x       |        x       |
-| LiDAR detector | Euclidean cluster, depth cluster|                |        x       |        x       |
-| LiDAR tracker  | IMM UKF PDA tracker, KF contour tracker|         |        x       |                |
-| Camera (Tengine)| Object detection, traffic light, lane mark |    |        x       |                |
-| Camera (with accelerator)| Object detection, traffic light, lane mark |  | x       |                | 
-| Fusion/Filter  | Multi LiDAR fusion, EKF, points down sampler, points preprocessor|  |  x  |        |
-| Fusion/Filter  | LiDAR/Radar fusion              |                |        x       |                |
-| Map            | Vector map / HD map support port|                |        x       |                |
-| Runtime IDE client | AutoCore runtime IDE tool   |                |                |        x       |
-
-### Autoware Port
-| Item           | Description    | Reference Code | AutoCore SDK   |
-| -------------  | -------------  | :------------: | :------------: |
-| Planning       | Mission planner, motion planner, decision maker|  x  |     |
+| Item           | Description                     |  System image  | Open Source | AutoCore SDK   |
+| -------------  | -------------                   | :------------: | :---------: | :------------: |
+| Operation System| Ubuntu 18.04                   |        x       |      x      |                |
+| Kernel         | LTS kernel 4.14                 |        x       |      x      |                |
+| MiddleWare     | ROS Melodic, ROS2 Dashing       |        x       |      x      |                |
+| PCI-E Driver   | PCI-E driver to support Accelerators |   x       |             |                |
+| LiDAR driver   | Velodyne driver, Robosense driver|       x       |             |                |
+| Camera driver  | UVC camera driver, GigE camera  |        x       |             |                |
+| Localization   | LiDAR NDT                       |                |             |        x       |
+| Localization   | GNSS/IMU/ODOM EKF fusion        |                |             |        x       |
+| LiDAR detector | Euclidean cluster, depth cluster|                |             |        x       |
+| LiDAR tracker  | IMM UKF PDA tracker             |                |             |        x       |
+| Camera (with accelerator)| Object detection, traffic light, lane mark |  |      |        x       | 
+| Fusion/Filter  | Multi LiDAR fusion, EKF, points down sampler, points preprocessor|  |     |  x  |
+| Fusion/Filter  | LiDAR/Radar/Camera fusion       |                |             |        x       |
+| Map            | Vector map / HD map support port|                |             |        x       |
+| Runtime IDE client | AutoCore runtime IDE tool   |                |             |        x       |
 
 ### Tools
 | Item           | Description    | Reference Code | AutoCore SDK   |
 | -------------  | -------------  | :------------: | :------------: |
-| v-Map          | Vector map editor|    |  x  |
-| HD Map         | Point cloud map builder|   | x |
-| Simulation     | Simulation tool and test scenarios|   | x |
-| Runtime IDE    | AutoCore runtime framework management tool |    |  x  |
+| V-Map          | Vector map editor|         x    |        x       |
+| PCD Map         | Point cloud map builder|   x    |        x       |
+| Simulation     | Simulation tool and test scenarios| x |  x       |
+| Runtime IDE    | AutoCore runtime framework management tool|  | x |
 
 
 ## Applications

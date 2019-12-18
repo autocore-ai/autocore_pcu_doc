@@ -2,26 +2,56 @@
 
 ## Feature list
 
+- Platform (integrated in system image)
+  - ROS2 support
+  - Time synchronization
+  - Health management
+  - Data security and integrity
+  - Redundancy hardware support
 - [Drivers](#drivers) (integrated in system image)
   - Robosense
   - Velodyne
   - GNSS(NMEA)
   - Xsens IMU
-  - UVC camera
+  - UVC Camera
+  - DNN Accelerator Driver
+  - CAN Driver 
+    - Continental Radar
+    - Vehicle CAN Data
 - [Perception](#perception)
   - [Voxel Filter](#voxel-filter)
   - [Ray Ground Filter](#ray-ground-filter)
   - [Euclidean Cluster](#euclidean-cluster)
   - [Depth Cluster](#depth-cluster)
+  - CNN_LiDAR
+  - [Multi LiDAR Fusion](#multi-lidar-fusion)
+  - CNN_Camera (with accelerator)
+  - Multi Radar Fusion
+  - Camera LiDAR Fusion
 - [Localization](#localization)
   - [GNSS](#gnss)
   - [NDT_LiDAR](#ndt-lidar)
   - [EKF_GPS-IMU-ODOM](#ekf-gps-imu-odom)
+  - UKF_ODOM
+  - NDT_Radar
+- [Control]
+  - MPC
+  - Vehicle DBW Control
 - Map
-  - Map loader
+  - PointCloud Map loader
   - Vector map loader
+    - Lanelet2 format support
+  - Radar map support
 - [Tools](#tools)
   - [IDE](#ide)
+  - [Vector Map Editor]
+  - [PointCloud Map Editor]
+  - [Radar Map Editor]
+- Simulation
+  - Simulation Tool
+  - Map Resources
+  - Test Scenarios
+  - Automated testing
 
 ---
 
@@ -34,6 +64,8 @@
 - GNSS(NMEA)
 - Xsens IMU
 - UVC camera
+- Radar
+- Vehicle CAN Data
 
 ---
 
@@ -45,7 +77,7 @@
 Voxel filter is used to down sample raw LiDAR point cloud data, reduces the data size while reserves the key information.
 
 **Interfaces**  
-Input topic： /points_raw
+Input topic： /points_raw  
 Output topic： /filtered_points
 
 
@@ -95,7 +127,21 @@ Output topic：
 /detection/lidar_detector/objects
 
 **Performance**  
-With default parameter settings，using robosense32 LiDAR, the CPU usage of PCU is within ??.
+With default parameter settings，using robosense32 LiDAR, the CPU usage of PCU is about 30-40%.
+
+#### Multi LiDAR Fusion
+
+**Function**  
+Based on position relationship of different LiDARs, the input of 3 LiDARs are united to form one point cloud frame. 
+
+**Interfaces**  
+Input topic：  
+/points_raw
+/ns1/rslidar1
+/ns2/rslidar2
+
+Output topic：
+/points_calibrated
 
 ---
 
@@ -110,10 +156,10 @@ This GNSS module translates GPS coordinate(in navsatfix formation) into local re
 **Interfaces**  
 Input topic：  
 /fix    --- *navsatfix formation*  
-/gga_raw    --- *GGA data of GNSS*  
-/rmc_raw    --- *RMC data of GNSS*  
+/gga_raw    --- *GGA data of GPS*  
+/rmc_raw    --- *RMC data of GPS*  
 
-Output topic： 
+Output topic：  
 /gnss_pose  --- *Local reference-frame location in map*  
 
 **Performance**  
@@ -130,10 +176,10 @@ This EKF filter is used for multi sensor fusion localization. Based on different
 Input topic：  
 /imu_raw    --- *IMU data*  
 /twist    --- *Vehicle speed*  
-/gga_raw    --- *GGA data of GNSS*  
-/rmc_raw    --- *RMC data of GNSS*  
+/gga_raw    --- *GGA data of GPS*  
+/rmc_raw    --- *RMC data of GPS*  
 
-Output topic： 
+Output topic：  
 /map_navsatfix  --- *longitude and latitude*  
 /map_odometry  --- *Vehicle starting point in map*  
 /gps_odometry  --- *GPS location data for debug and test*  
