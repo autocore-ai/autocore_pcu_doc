@@ -82,7 +82,7 @@ Output topic： /filtered_points
 
 
 **Performance**  
-With default parameter leaf_size=2.0, using robosense32 LiDAR the CPU usage of PCU is within 10%.
+With default parameter leaf_size=2.0, using Robosense 32 LiDAR the CPU usage of PCU is within 10%.
 
 #### Ray Ground Filter
 
@@ -95,7 +95,7 @@ Input topic： /points_raw
 Output topic： /points_no_ground, /points_ground
 
 **Performance**  
-With default parameter settings，using robosense32 LiDAR, the CPU usage of PCU is within 20%.
+With default parameter settings，using Robosense 32 LiDAR, the CPU usage of PCU is within 20%.
 
 #### Euclidean Cluster
 
@@ -111,7 +111,7 @@ Output topic：
 /detection/lidar_detector/objects
 
 **Performance**  
-With default parameter settings，using robosense32 LiDAR, the CPU usage of PCU is about 40-50%.
+With default parameter settings，using Robosense 32 LiDAR, the CPU usage of PCU is about 40-50%.
 
 #### Depth Cluster
 
@@ -127,20 +127,20 @@ Output topic：
 /detection/lidar_detector/objects
 
 **Performance**  
-With default parameter settings，using robosense32 LiDAR, the CPU usage of PCU is about 30-40%.
+With default parameter settings，using Robosense 32 LiDAR, the CPU usage of PCU is about 30-40%.
 
 #### Multi LiDAR Fusion
 
 **Function**  
-Based on position relationship of different LiDARs, the input of 3 LiDARs are united to form one point cloud frame. 
+Based on different position and orientation of all LiDARs, the input of all LiDARs are united to form one point cloud frame. 
 
 **Interfaces**  
 Input topic：  
-/points_raw
-/ns1/rslidar1
+/points_raw  
+/ns1/rslidar1  
 /ns2/rslidar2
 
-Output topic：
+Output topic：  
 /points_calibrated
 
 ---
@@ -149,24 +149,24 @@ Output topic：
 
 #### GNSS
 
+> Note: GNSS and EKF_GPS-IMU-ODOM are exclusive, if using high performance integrated navigation module, please launch GNSS function; With low cost GPS, please launch EKF_GPS-IMU-ODOM and disable GNSS.
+
 **Function**  
 This GNSS module translates GPS coordinate(in navsatfix formation) into local reference-frame UTM coordinate, and use local reference-frame UTM coordinate to provide initial position information for NDT_LiDAR localization. 
 
 
 **Interfaces**  
 Input topic：  
-/fix    --- *navsatfix formation*  
-/gga_raw    --- *GGA data of GPS*  
-/rmc_raw    --- *RMC data of GPS*  
+/micro_dds/gps_raw    --- *navsatfix formation*  
+/micro_dds/gga_raw    --- *GGA data of GPS*  
+/micro_dds/rmc_raw    --- *RMC data of GPS*  
 
 Output topic：  
 /gnss_pose  --- *Local reference-frame location in map*  
 
-**Performance**  
-With short period blocked or drifted GPS signal，e.g. passing a short tunnel with high speed, the filtered data remains stable and smooth. With long period blocked or drifted GPS signal, after GPS signal gets normal, the filtered data may sightly vibrate.
-
-
 #### EKF_GPS-IMU-ODOM
+
+> Note: GNSS and EKF_GPS-IMU-ODOM are exclusive, if using high performance integrated navigation module, please launch GNSS function; With low cost GPS, please launch EKF_GPS-IMU-ODOM and disable GNSS.
 
 **Function**  
 This EKF filter is used for multi sensor fusion localization. Based on different frequency and character of input data, EKF aims at provide a stable and accurate output location data even when GPS signal is blocked or drifted temporarily. 
@@ -174,10 +174,10 @@ This EKF filter is used for multi sensor fusion localization. Based on different
 
 **Interfaces**  
 Input topic：  
-/imu_raw    --- *IMU data*  
-/twist    --- *Vehicle speed*  
-/gga_raw    --- *GGA data of GPS*  
-/rmc_raw    --- *RMC data of GPS*  
+/micro_dds/imu_raw    --- *IMU data*  
+/byd_sdk/twist    --- *Vehicle speed*  
+/micro_dds/gga_raw    --- *GGA data of GPS*  
+/micro_dds/rmc_raw    --- *RMC data of GPS*  
 
 Output topic：  
 /map_navsatfix  --- *longitude and latitude*  
@@ -196,8 +196,8 @@ This is a LiDAR localization module based on normal distributions transform (NDT
 **Interfaces**  
 Input topic：  
 /points_raw  --- *Raw LiDAR point cloud input*  
-/twist    --- *Vehicle speed*  
-/imu_raw    --- *IMU data*  
+/byd_sdk/twist    --- *Vehicle speed*  
+/micro_dds/imu_raw    --- *IMU data*  
 /map_odometry  --- *Vehicle starting point in map*  
 /gnss_pose  --- *Relative location in map*  
 
