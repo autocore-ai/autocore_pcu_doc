@@ -29,7 +29,7 @@
   - Multi Radar Fusion
   - Camera LiDAR Fusion
 - [Localization](#localization)
-  - [GNSS](#gnss)
+  - [GNSS Localizer](#gnss-localizer)
   - [NDT_LiDAR](#ndt-lidar)
   - [EKF_GPS-IMU-ODOM](#ekf-gps-imu-odom)
   - UKF_ODOM
@@ -55,8 +55,9 @@
 
 ---
 
-> *current release only support ROS1 interface/topic, default ros master is IP address of br0 on PCU.*
+> **Current release only support ROS1 interface/topic, default ROS master is IP address of br0 on PCU.**
 
+---
 
 ### Drivers
 
@@ -119,7 +120,7 @@ With default parameter settings，using Robosense 32 LiDAR, the CPU usage of PCU
 #### Depth Cluster
 
 **Function**  
-Depth cluster is a 2.5D LiDAR point cluster based on the depth information processing method.
+Depth cluster LiDAR point cloud clustering module based on the depth information processing algorithm.
 
 **Interfaces**  
 Input topic：  
@@ -137,8 +138,8 @@ With default parameter settings，using Robosense 32 LiDAR, the CPU usage of PCU
 **Function**  
 Based on different position and orientation of all LiDARs, the input of all LiDARs are united to form one point cloud frame. 
 
-> calibration file should be store in ~/.ros/.  
-> calibration tool and proccess will be pubulished later.
+> Calibration file should be store in `~/.ros/.`
+  Calibration tool and process will be published later.
 
 **Interfaces**  
 Input topic：  
@@ -181,7 +182,7 @@ This EKF filter is used for multi sensor fusion localization. Based on different
 **Interfaces**  
 Input topic：  
 /micro_dds/imu_raw    --- *IMU data*  
-/byd_sdk/twist    --- *Vehicle speed(depends on DBW SDK)*  
+/byd_sdk/twist    --- *Vehicle speed (depends on DBW SDK)*  
 /micro_dds/gga_raw    --- *GGA data of GPS*  
 /micro_dds/rmc_raw    --- *RMC data of GPS*  
 
@@ -202,7 +203,7 @@ This is a LiDAR localization module based on normal distributions transform (NDT
 **Interfaces**  
 Input topic：  
 /points_raw  --- *Raw LiDAR point cloud input*  
-/byd_sdk/twist    --- *Vehicle speed(optional)*   
+/byd_sdk/twist    --- *Vehicle speed (optional)*   
 /micro_dds/imu_raw    --- *IMU data*  
 /map_odometry  --- *Vehicle starting point in map*  
 /gnss_pose  --- *Relative location in map*  
