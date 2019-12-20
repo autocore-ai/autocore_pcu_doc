@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-1. [How to install on Arm system](#how-to-install-on-arm-system)  
-2. [How to install on x86-64 computer](#how-to-install-on-x86-64-computer)  
+1. [How to install on MPU system](#how-to-install-on-arm-system)  
+2. [How to install on MCU](#how-to-install-on-x86-64-computer)  
 3. [How to uninstall](#how-to-uninstall)
 3. [How to install Autoware.AI](#how-to-install-autowareai)  
 
