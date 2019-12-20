@@ -80,7 +80,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | Operation System| Ubuntu 18.04                   |        x       |      x      |                |
 | Kernel         | LTS kernel 4.14                 |        x       |      x      |                |
 | MiddleWare     | ROS Melodic, ROS2 Dashing       |        x       |      x      |                |
-| PCI-E Driver   | PCI-E driver to support Accelerators |   x       |             |                |
+| PCI-E Driver   | PCI-E driver to support Accelerators (edgeTPU, Movidius) |   x       |             |                |
 | LiDAR driver   | Velodyne driver, Robosense driver|       x       |             |                |
 | Camera driver  | UVC camera driver, GigE camera  |        x       |             |                |
 | Localization   | LiDAR NDT                       |                |             |        x       |
@@ -94,11 +94,11 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | Runtime IDE client | AutoCore runtime IDE tool   |                |             |        x       |
 
 ### Tools
-| Item           | Description    | Reference Code | AutoCore SDK   |
+| Item           | Description    | Open Source Code | AutoCore SDK   |
 | -------------  | -------------  | :------------: | :------------: |
 | V-Map          | Vector map editor|         x    |        x       |
-| PCD Map         | Point cloud map builder|   x    |        x       |
-| Simulation     | Simulation tool and test scenarios| x |  x       |
+| PCD Map         | Point cloud map builder|       |        x       |
+| Simulation     | Simulation tool and test scenarios|  |  x       |
 | Runtime IDE    | AutoCore runtime framework management tool|  | x |
 
 
