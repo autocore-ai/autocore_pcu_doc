@@ -117,7 +117,7 @@ PCU board follows 96Boards open standard, and it is compatible with Autoware ope
     - L4 AD perception, localization, planning and control.  
 
 3. **Multi board application:**    
-    - Full L4 AD functions. (x2: PCU, x1: CCU(Camera Computer Unit))
+    - Full L4 AD functions. (with extra ADCU)
     - Work together with other hardware platform or IPC.
 
 ## User Guide
