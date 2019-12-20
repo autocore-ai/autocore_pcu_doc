@@ -69,7 +69,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | IMU Driver     | Xsens IMUs driver               |        x       |             |                |
 | Radar          | Continental ARS408/208 driver   |        x       |             |                |
 | Ultrasonic     | Ultrasonic sensor driver        |                |             |                |
-| Time service   | Time service                    |        x       |             |                |
+| Time service   | Time service (NTP server)                   |        x       |             |                |
 | Vehicle info   | Vehicle information from CAN    |                |             |        x       |
 | Vehicle DBW    | Vehicle drive-by-wire CAN interface|             |             |        x       |
 | Runtime framework| AutoCore runtime framework    |                |             |        x       |
