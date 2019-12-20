@@ -55,6 +55,9 @@
 
 ---
 
+> *current release only support ROS1 interface/topic, you can setup ROS_MASTER_IP from IDE Tool.*
+
+
 ### Drivers
 
 > The drivers have already been integrated into the system image.
@@ -134,6 +137,9 @@ With default parameter settings，using Robosense 32 LiDAR, the CPU usage of PCU
 **Function**  
 Based on different position and orientation of all LiDARs, the input of all LiDARs are united to form one point cloud frame. 
 
+> calibration file should be store in ~/.ros/.  
+> calibration tool and proccess will be pubulished later.
+
 **Interfaces**  
 Input topic：  
 /points_raw  
@@ -147,7 +153,7 @@ Output topic：
 
 ### Localization
 
-#### GNSS
+#### GNSS Localizer
 
 > Note: GNSS and EKF_GPS-IMU-ODOM are exclusive, if using high performance integrated navigation module, please launch GNSS function; With low cost GPS, please launch EKF_GPS-IMU-ODOM and disable GNSS.
 
@@ -175,7 +181,7 @@ This EKF filter is used for multi sensor fusion localization. Based on different
 **Interfaces**  
 Input topic：  
 /micro_dds/imu_raw    --- *IMU data*  
-/byd_sdk/twist    --- *Vehicle speed*  
+/byd_sdk/twist    --- *Vehicle speed(depends on DBW SDK)*  
 /micro_dds/gga_raw    --- *GGA data of GPS*  
 /micro_dds/rmc_raw    --- *RMC data of GPS*  
 
@@ -196,7 +202,7 @@ This is a LiDAR localization module based on normal distributions transform (NDT
 **Interfaces**  
 Input topic：  
 /points_raw  --- *Raw LiDAR point cloud input*  
-/byd_sdk/twist    --- *Vehicle speed*  
+/byd_sdk/twist    --- *Vehicle speed(optional)*   
 /micro_dds/imu_raw    --- *IMU data*  
 /map_odometry  --- *Vehicle starting point in map*  
 /gnss_pose  --- *Relative location in map*  
