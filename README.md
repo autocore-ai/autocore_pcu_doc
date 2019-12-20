@@ -43,7 +43,7 @@ To know about Autoware software and Autoware Foundation, please refer to:
 * [Autoware.AI WiKi](https://gitlab.com/autowarefoundation/autoware.ai/autoware/wikis/home)  
 * [Autoware Foundation](https://www.autoware.org/)
 
- AutoCore also provides variety of ready to use SDKs of autonomous driving features which are developed based on state of the art technology with full test and verification. To use the SDKs, just replace the corresponding features in Autoware. In current phase, SDKs mainly cover the middle-ware, framework and some modules: "Safety Backbone", "Control", "Perception", and "Localization".A detailed system architecture is shown in the diagram below. In the future, AutoCore will continue to enrich the SDKs.
+ AutoCore also provides variety of ready to use SDKs of autonomous driving features which are developed based on state of the art technology with full test and verification. To use the SDKs, just replace the corresponding features in Autoware. In current phase, SDKs mainly cover the middle-ware, framework, IDE tools, and some modules: "Safety Backbone", "Control", "Perception", and "Localization".A detailed system architecture is shown in the diagram below. In the future, AutoCore will continue to enrich the SDKs.
 
  Heterogeneous hardware + AutoCore SDKs + AutoWare.AI/Autoware.Auto, together they form an automotive level and ready to use platform. AutoCore also provide very handy tools like simulation environment, HD map/vector map editor, real-time calibration IDE etc.
 
@@ -78,7 +78,7 @@ With standardized hardware architecture and optimized SDK, AutoCore could suppor
 
 ### AutoCore SDK features list
 
-[AutoCore SDK Feature List](Sdk_feature_list.md)
+[AutoCore SDK Feature List](docs/Sdk_feature_list.md)
 
 ## FAQs
 

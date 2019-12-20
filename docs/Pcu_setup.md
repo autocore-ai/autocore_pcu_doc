@@ -77,6 +77,7 @@ On your PCU board, you can see a label attached with IP address, username, passw
     - VNC
     Note: If you would like to use VNC, you should start VNC server first:  
     `$ vncserver`  
+    VNC server has been pre configured for `user` account.  
     Then you could connect from host PC:  
     `$ remmina`  
     `# Default username is same with ssh, default password is '123456'`

@@ -14,7 +14,7 @@ The key hardware components required to get the system working include:
     - Broadgnss RAC-P1
     - Topgnss GN-507 
     - U-Blox NEO-M8 products
-- Inertial Measurement Unit (IMU) ─ [Xsense MTI-30](https://wiki.ros.org/ethzasl_xsens_driver)
+- Inertial Measurement Unit (IMU) ─ [Xsens MTI-30](https://wiki.ros.org/ethzasl_xsens_driver)
 - Light Detection and Ranging System (LiDAR) ─  You can select one of the following options, Robosense RS-Fusion_P3 is used for our case:
     - [Robosense RS-Fusion-P3, RS-LiDAR-32, RS-LiDAR-16](https://github.com/RoboSense-LiDAR/ros_rslidar/blob/master/doc/readme.md)
     - [Velodyne HDL-64E, VLP16, VLP32](https://wiki.ros.org/velodyne)
@@ -55,7 +55,7 @@ If you are planning to deploy in vehicle for test purpose, the vehicle must be m
 - A custom-made rack in the trunk to mount the power distributor panel, AutoCore PCU ,other computing boards, and additional components.
 - An Emergency stop button is required to be mounted on the dashboard to trigger pre-defined safety actions.
 
-> :warning:**Warning: Please be noted that this system could only be use for test purpose with speed < 40 km/h in disclosed testing field, safety drivers (one or two) are mendatory to monitor the system and take proper reactions when required.**
+> :warning:**Warning: Please be noted that this system could only be use for test purpose with speed < 40 km/h in disclosed testing field, safety drivers (one or two) are mandatory to monitor the system and take proper reactions when required.**
 
 
 ### AutoCore default

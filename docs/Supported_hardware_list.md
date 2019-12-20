@@ -6,6 +6,14 @@
 
   PCU (Perception computer unit) 1.0 Dev Board is a reference design board of high-performance domain controller for serial production in automotive industry. Based on an MCU-MPU architecture, different ADAS / AD functions can be integrated with different safety levels up to ASIL D after ISO 26262.
 
+  **Extentions:**
+
+  - **[Edge TPU](https://cloud.google.com/edge-tpu/)**  
+  Edge TPU is Google’s purpose-built ASIC designed to run inference at the edge. 
+
+  - **[Movidius](https://software.intel.com/en-us/neural-compute-stick)**  
+  Intel Movidius Neural Compute Stick (NCS) is a Plug and Play development kit for AI inferencing.
+
 - **CCU Dev Board (Coming soon)**
     
   CCU (Camera computer unit) Dev Board is a high-performance hardware platform suitable for camera/vision related functions. Integrated with AI processors and a wide variety of interfaces
@@ -18,4 +26,4 @@
 
 - **[Ultra96](https://www.96boards.org/product/ultra96/)**
 
-  The Ultra96 is an Arm-based, Xilinx Zynq UltraScale+ ™ MPSoC development board based on the Linaro 96Boards Consumer Edition (CE) specification. It offers a wide range of potential peripherals and acceleration engines in the programmable logic that is not available from other platforms.
+  The Ultra96 is an Arm-based, Xilinx Zynq UltraScale+ MPSoC development board based on the Linaro 96Boards Consumer Edition (CE) specification. It offers a wide range of potential peripherals and acceleration engines in the programmable logic that is not available from other platforms.
