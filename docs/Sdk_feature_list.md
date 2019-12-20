@@ -55,7 +55,7 @@
 
 ---
 
-> *current release only support ROS1 interface/topic, you can setup ROS_MASTER_IP from IDE Tool.*
+> *current release only support ROS1 interface/topic, default ros master is IP address of br0 on PCU.*
 
 
 ### Drivers
