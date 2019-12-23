@@ -1,5 +1,7 @@
 # AutoCore PCU SDK Installation
 
+> For details of the features in SDK package, please refer to [AutoCore SDK Feature List](docs/Sdk_feature_list.md).
+
 ## Table of Contents
 
 1. [How to install on MPU](#how-to-install-on-mpu)  
@@ -11,7 +13,7 @@
 ### Pre conditions
 You should have a PCU dev board with pre-installed system (Ubuntu 18.04 and ros-melodic). If you would like to flash the image of MPU, please refer to [PCU setup guide](Pcu_setup.md#flash-open-source-mcu-image).
 
-The required SDK package could be found on AutoCore [Resource Downloads page](Resource_download.md)
+The required SDK package could be found on AutoCore [Resource Downloads page](Resource_download.md#mpu-sdk)
 
 ### Install
 
@@ -29,7 +31,7 @@ The required SDK package could be found on AutoCore [Resource Downloads page](Re
     
     - `$source /opt/autocore/setup.bash`
 
-### How to uninstall
+### Uninstall
 
 If you want to remove the SDK software, please use the following:
 
@@ -39,21 +41,26 @@ If you want to remove the SDK software, please use the following:
 ## How to install on MCU
 
 ### Pre conditions
-You should have a PCU dev board.
 
-The required SDK package could be found on AutoCore [Resource Downloads page](Resource_download.md)
+1. You should have a PCU dev board. The MCU model is TMS570LC43XX from TI.
+
+2. TI XDS-class debug probe, e.g. XDS100V3 and JTAG cable. And a PC installed Uniflash v5.2.0 or above. Uniflash download and supported debug probe list please refer to TI website: http://www.ti.com/tool/download/UNIFLASH .
+
+3. The required SDK file could be found on AutoCore [Resource Downloads page](Resource_download.md#mcu-sdk)
 
 ### Install
 
-1. Download the SDK package from the resource download page.
+1. Download the SDK package file from the resource download page.
 
-2. Flash the package to MCU:
+2. Run Uniflash, choose device as **TMS570LC43XX**, choose proper connection according to your debug probe which is **XDS100V3** in our case, and click start.  
+![MCU Flash 1](images/Mcu_flash_1.png)
 
-3. Reset and Run.
+3. Select the SDK file and click load image, wait until flash success.  
+![MCU Flash 2](images/Mcu_flash_2.png)
 
 ### Uninstall
 
-To uninstall MCU SDK package, you need to flash the MCU with original built
+To uninstall MCU SDK package, you need to flash the MCU with original open source MCU HAL. Please refer to our open source project: https://github.com/autocore-ai/pcu_mcu_hal
 
 ## How to install Autoware.AI
 
