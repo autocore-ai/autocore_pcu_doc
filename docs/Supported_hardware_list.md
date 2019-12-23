@@ -14,9 +14,9 @@
   - **[Movidius](https://software.intel.com/en-us/neural-compute-stick)**  
   Intel Movidius Neural Compute Stick (NCS) is a Plug and Play development kit for AI inferencing.
 
-- **CCU Dev Board (Coming soon)**
+- **ADCU Dev Board (Coming soon)**
     
-  CCU (Camera computer unit) Dev Board is a high-performance hardware platform suitable for camera/vision related functions. Integrated with AI processors and a wide variety of interfaces
+  ADCU (Autonomous driving computer unit) Dev Board is a high-performance hardware platform designed for camera/vision perceptiong and planning functions. Integrated with AI processors and a wide variety of interfaces, it is capable of processing multiple camera input and 
 
 ### 96Boards
 ---

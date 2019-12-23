@@ -160,7 +160,7 @@ To install MPU image(without SDK) on an SD card, you will need another PC with a
 
 1. Download an image
 
-    Official images with recommended OS and middle-ware are available on AutoCore [Resource Download page](Resource_download.md).
+    Official images with recommended OS and middle-ware are available on AutoCore [Resource Download page](Resource_download.md#mpu-images).
 
 2. Image writing tool
 
