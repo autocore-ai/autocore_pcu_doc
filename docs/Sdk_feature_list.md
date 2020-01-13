@@ -164,9 +164,7 @@ This GNSS module translates GPS coordinate(in navsatfix formation) into local re
 
 **Interfaces**  
 Input topic：  
-/micro_dds/gps_raw    --- *navsatfix formation*  
-/micro_dds/gga_raw    --- *GGA data of GPS*  
-/micro_dds/rmc_raw    --- *RMC data of GPS*  
+/micro_dds/gps_raw    --- *navsatfix formation*   
 
 Output topic：  
 /gnss_pose  --- *Local reference-frame location in map*  
@@ -202,10 +200,10 @@ This is a LiDAR localization module based on normal distributions transform (NDT
 
 **Interfaces**  
 Input topic：  
-/points_raw  --- *Raw LiDAR point cloud input*  
+/points_map_loader --- *pcd map data*  
+/filtered_points  --- *Filtered LiDAR point cloud*  
 /byd_sdk/twist    --- *Vehicle speed (optional)*   
-/micro_dds/imu_raw    --- *IMU data*  
-/map_odometry  --- *Vehicle starting point in map*  
+/micro_dds/imu_raw    --- *IMU data (optional)*  
 /gnss_pose  --- *Relative location in map*  
 
 Output topic：  

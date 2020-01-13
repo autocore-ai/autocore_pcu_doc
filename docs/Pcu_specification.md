@@ -14,7 +14,7 @@
 
 ## Overview
 
-![PCU Dev board](images/PCU_top_view.png "PCU Dev board")
+![PCU Dev board](images/Pcu_top_view.png "PCU Dev board")
 
 PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boards open standard, is a development board for automotive applications as high-performance domain controller designed by AutoCore. PCU board integrates a lock-step MCU and an high performance MPU with it. Based on the MCU-MPU architecture, different ADAS / AD or relevant functions can be integrated with different functional safety levels up to ASIL D after ISO 26262. A wide variety of interfaces are provided to support vehicle networks connection, sensors and peripherals. Additional hardware accelerator could be connected via PCIe with additional computing power.
 
@@ -55,7 +55,9 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | Digital IO ports | x3 (optional) |
 
 ## Block diagram
-![PCU block diagram](images/PCU_block_diagram.png "PCU block diagram")
+![PCU block diagram](images/Pcu_block_diagram.png "PCU block diagram")
+
+[PCU Schematics](pdf/Pcu_schematics.pdf "PCU Schematics")
 
 ## Software
 
@@ -69,7 +71,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | IMU Driver     | Xsens IMUs driver               |        x       |             |                |
 | Radar          | Continental ARS408/208 driver   |        x       |             |                |
 | Ultrasonic     | Ultrasonic sensor driver        |                |             |                |
-| Time service   | Time service (NTP server)                   |        x       |             |                |
+| Time service   | Time service (NTP server)       |        x       |             |                |
 | Vehicle info   | Vehicle information from CAN    |                |             |        x       |
 | Vehicle DBW    | Vehicle drive-by-wire CAN interface|             |             |        x       |
 | Runtime framework| AutoCore runtime framework    |                |             |        x       |
@@ -80,7 +82,7 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | Operation System| Ubuntu 18.04                   |        x       |      x      |                |
 | Kernel         | LTS kernel 4.14                 |        x       |      x      |                |
 | MiddleWare     | ROS Melodic, ROS2 Dashing       |        x       |      x      |                |
-| PCI-E Driver   | PCI-E driver to support Accelerators (edgeTPU, Movidius) |   x       |             |                |
+| PCI-E Driver   | PCI-E driver to support Accelerators (edgeTPU, Movidius) | x | |                |
 | LiDAR driver   | Velodyne driver, Robosense driver|       x       |             |                |
 | Camera driver  | UVC camera driver, GigE camera  |        x       |             |                |
 | Localization   | LiDAR NDT                       |                |             |        x       |
@@ -94,12 +96,12 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | Runtime IDE client | AutoCore runtime IDE tool   |                |             |        x       |
 
 ### Tools
-| Item           | Description    | Open Source Code | AutoCore SDK   |
-| -------------  | -------------  | :------------: | :------------: |
-| V-Map          | Vector map editor|         x    |        x       |
-| PCD Map         | Point cloud map builder|       |        x       |
-| Simulation     | Simulation tool and test scenarios|  |  x       |
-| Runtime IDE    | AutoCore runtime framework management tool|  | x |
+| Item           | Description    | Open Source  | AutoCore SDK   |
+| -------------  | -------------  | :----------: | :------------: |
+| V-Map          | Vector map editor|       x    |        x       |
+| PCD Map         | Point cloud map builder|     |        x       |
+| Simulation     | Simulation tool and test scenarios|  |  x      |
+| Runtime IDE    | AutoCore runtime framework management tool| | x|
 
 
 ## Applications
@@ -125,6 +127,5 @@ PCU board follows 96Boards open standard, and it is compatible with Autoware ope
 Please go to the documentation page of AutoCore platform:
 
 [AutoCore Documentation Page](../README.md)  
-[PCU Hardware Manual](../pdf/Pcu_hardware_manual.pdf)  
+[PCU Hardware Manual](Pcu_hardware_manual.md)  
 [PCU setup](Pcu_setup.md)  
-

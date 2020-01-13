@@ -1,6 +1,6 @@
 # AutoCore PCU setup guide
 
-The *AutoCore PCU Setup Guide* provides the Instruction of how to set up AutoCore PCU dev board.
+> The *AutoCore PCU Setup Guide* provides the Instruction of how to set up AutoCore PCU dev board.
 
 ---
 ## Table of Contents
@@ -39,7 +39,8 @@ The SD card have been pre-installed with Ubuntu 18.04, and ros-melodic.
 
 3. Insert the MicroSD card.
 
-4. Plug in the power supply, and other cables you want to use.
+4. Plug in the power supply, and other cables you want to use.  
+> For cable pin assignment, please refer to [PCU Cable Diagram](pdf/Pcu_cable_diagram.pdf)
 
 5. Turn on the main switch.
 
@@ -115,7 +116,7 @@ On your PCU board, you can see a label attached with IP address, username, passw
 
     If you are not able to change the DHCP server network segment, and it conflicts with PCU internal network segment (192.168.1.x), you can follow the guide in **Note 2** to change internal IP. Please be careful when you do this, you may cause lost communication to PCU board, or some issues connecting to LiDAR.
 
-> :information_source:**Note 1**: for Ethernet port assignment, please refer to the [PCU Hardware Manual](pdf/Pcu_hardware_manual.pdf).
+> :information_source:**Note 1**: for Ethernet port assignment, please refer to the [PCU Hardware Manual](Pcu_hardware_manual.md).
 
 > :information_source:**Note 2**: advanced users who want to configure each Ethernet port should follow the [Advanced network settings](#advanced-network-settings).
 
