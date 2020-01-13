@@ -21,7 +21,7 @@ For business and partnership, please visit our website: [www.autocore.ai](http:/
 3. [Technical specifications](#technical-specifications)  
    - [System block diagram](#system-block-diagram)  
    - [PCU system diagram](#pcu-system-diagram)  
-   - [AutoCore SDK features list](#autoCore-sdk-features-list)  
+   - [AutoCore SDK features list](#autocore-sdk-features-list)  
 
 ## Overview
 
@@ -57,13 +57,15 @@ With standardized hardware architecture and optimized SDK, AutoCore could suppor
 
 2. [PCU setup](docs/Pcu_setup.md "PCU setup") - Instruction of how to set up AutoCore PCU dev board.
 
-3. [PCU SDK installation](docs/Sdk_installation.md)  -Steps to install the the SDK package of AutoCore.
+3. [PCU Hardware Manual](docs/Pcu_hardware_manual.md) - User manual of AutoCore PCU dev board hardware.
 
-4. [PCU SDK usage guide](docs/Sdk_guide.md) -AutoCore SDK usage manual.
+4. [PCU SDK installation](docs/Sdk_installation.md)  -Steps to install the the SDK package of AutoCore.
 
-5. [Simulation guide](docs/Simulation.md) -Test run AutoCore in simulation environment with simulation tool.
+5. [PCU SDK usage guide](docs/Sdk_guide.md) -AutoCore SDK usage manual.
 
-6. [Vehicle test guide](docs/Vehicle_test_guide.md) -To setup test vehicle and run a simple field test.
+6. [Simulation guide](docs/Simulation.md) -Test run AutoCore in simulation environment with simulation tool.
+
+7. [Vehicle test guide](docs/Vehicle_test_guide.md) -To setup test vehicle and run a simple field test.
 
 
 ## Technical Specifications
@@ -75,6 +77,10 @@ With standardized hardware architecture and optimized SDK, AutoCore could suppor
 ### PCU system diagram
 
 ![PCU system diagram](docs/images/Pcu_sys_diag.png "PCU system diagram")
+
+[PCU Schematics](docs/pdf/Pcu_schematics.pdf "PCU Schematics")  
+
+[PCU Cable Diagram](docs/pdf/Pcu_cable_diagram.pdf "PCU Cable Diagram")  
 
 ### AutoCore SDK features list
 

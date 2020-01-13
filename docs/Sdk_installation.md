@@ -11,7 +11,9 @@
 ## How to install on MPU
 
 ### Pre conditions
-You should have a PCU dev board with pre-installed system (Ubuntu 18.04 and ros-melodic). If you would like to flash the image of MPU, please refer to [PCU setup guide](Pcu_setup.md#flash-open-source-mcu-image).
+You should have a PCU dev board with pre-installed system (Ubuntu 18.04 and ros-melodic). To install latest SDK package, it is recommended to flash the system image first. Here is the instruction of how to flash: [PCU setup guide](Pcu_setup.md#flash-operating-system-images).  
+
+Official images with recommended OS and middle-ware are available on AutoCore [Resource Download page](Resource_download.md#mpu-images).
 
 The required SDK package could be found on AutoCore [Resource Downloads page](Resource_download.md#mpu-sdk)
 
@@ -60,7 +62,11 @@ If you want to remove the SDK software, please use the following:
 
 ### Uninstall
 
-To uninstall MCU SDK package, you need to flash the MCU with original open source MCU HAL. Please refer to our open source project: https://github.com/autocore-ai/pcu_mcu_hal
+To uninstall MCU SDK package, you need to flash the MCU with our open source MCU HAL. 
+
+For MCU_HAL source code please go to: https://github.com/autocore-ai/pcu_mcu_hal
+
+Please follow the instruction in the readme file in the Github repository to build and flash MCU.
 
 ## How to install Autoware.AI
 
