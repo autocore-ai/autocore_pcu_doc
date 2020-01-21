@@ -20,12 +20,12 @@ You should have a AutoCore PCU dev board set which contains the following items:
 - PCU board
 - Heat sink with fan
 - DC power adapter
-- MicroSD card with pre-installed system and software
+- MicroSD card with pre-installed system and software (optional)
 - 2x ECU connector breakout harness
 
 Also you need to buy a CR2032 3V battery which is not included in the package.
 
-The SD card have been pre-installed with Ubuntu 18.04, and ros-melodic.  
+The default boot device - EMMC has been pre-installed with Ubuntu 18.04, and ros-melodic. If you would like to boot from SD card, you could either request a SD card with pre-installed system or flash by yourself under instructions in below section.
 
 > Note: more advanced users looking to install a particular operating system should use this guide to [Flash operating system images](#flash-operating-system-images).
 
@@ -37,12 +37,10 @@ The SD card have been pre-installed with Ubuntu 18.04, and ros-melodic.
 2. Get a CR2032 3V battery and place it into the holder on board.  
     ![Battery Install](images/Battery_install.png)
 
-3. Insert the MicroSD card.
-
-4. Plug in the power supply, and other cables you want to use.  
+3. Plug in the power supply, and other cables you want to use.  
 > For cable pin assignment, please refer to [PCU Cable Diagram](pdf/Pcu_cable_diagram.pdf)
 
-5. Turn on the main switch.
+4. Turn on the main switch.
 
 
 ## Connect from PC
@@ -130,7 +128,7 @@ To synchronize the system time:
 # Enable ntp auto synchronize
 $ sudo timedatectl set-ntp on
 
-# Show current time
+# Show current time and synchronize
 $ date
 
 # Syncronize to hardware clock
@@ -145,6 +143,7 @@ PCU have already installed OS on MCU and provided SD card card with pre-installe
 You will need another computer with an SD card reader or TI debug tool to flash the image.
 
 ### Flash Open Source MCU image
+
 To flash OS for MCU(without SDK features), you will need:
 
 - TI XDS-class debug probe, e.g. [XDS100V3](http://dev.ti.com/tirex/explore/node?node=AEFfTlaHQHUWL-seh4M4tA__FUz-xrs__LATEST) and JTAG cable
@@ -156,6 +155,39 @@ For MCU_HAL source code please go to: https://github.com/autocore-ai/pcu_mcu_hal
 Please follow the instruction in the readme file in the Github repository to build and flash MCU.
 
 ### Flash Base MPU image
+
+#### Flash EMMC
+
+The on-board EMMC size is 64GB. Be sure to connect Jmp 1-3 to right position (1-2) before you start.
+
+1. Download an image
+
+    Official images with recommended OS and middle-ware are available on AutoCore [Resource Download page](Resource_download.md#mpu-images).
+
+    Extract the zip file to a USB drive. Then plug the USB drive to PCU
+
+2. Boot from QSPI
+
+    Power on the board, and hit any key to enter Uboot mode during start up:  
+    `Hit any key to stop autoboot:  10`  
+    Then boot from QSPI:  
+    `$ run qspi_bootcmd`
+    The default user name for QSPI system is `root`.
+
+3. Partition and format EMMC storage drive
+
+    `$ flex-installer -i pf -d /dev/mmcblk0`
+
+4. Install from USB
+
+    Mount the USB drive(/dev/sda1 in this case)  
+    `$ mount -t vfat /dev/sda1 /tmp/`   
+    Make sure the five files "setup.env", "flex-installer", "bootpartition_LS_arm64_lts_4.14.tgz", "rootfs_ubuntu_bionic_LS_arm64.tgz", and "firmware_ls1046afrwy_uboot_emmcboot.img" are in the USB drive.  
+    `$ cd /tmp/nxp_img` （The files are stored in nxp_img folder in this case）  
+    `$ ./setup.env`  
+    `$ flex-installer -b bootpartition_LS_arm64_lts_4.14.tgz -r rootfs_ubuntu_bionic_LS_arm64.tgz -f firmware_ls1046afrwy_uboot_emmcboot.img -d /dev/mmcblk0`   
+
+#### Flash SD card
 
 To install MPU image(without SDK) on an SD card, you will need another PC with an SD card reader. The minimum recommended card size is 64GB, and the speed should be at least class 10 A1, it is strongly recommended to use high speed SD card, e.g. class U3, A2. 
 
@@ -182,7 +214,7 @@ To install MPU image(without SDK) on an SD card, you will need another PC with a
 
 4. Plug and boot
 
-    Now you can plug in the SD card to PCU and power up. The system should be ready to work. Please be noted that the image only contains OS and middle-ware, if you would like to use more functionalities, please install AutoCore SDK follow this guide: [PCU SDK installation](Sdk_installation.md)
+    Make sure to connect Jmp 1-3 to right position (2-3) before you start. Now you can plug in the SD card to PCU and power up. The system should be ready to work. Please be noted that the image only contains OS and middle-ware, if you would like to use more functionalities, please install AutoCore SDK follow this guide: [PCU SDK installation](Sdk_installation.md)
 
 5. If you need to reset
 
