@@ -39,7 +39,7 @@
 |Res 2           | Hard reset button for MCU                                                       |
 |Res 3           | Soft reset button for MCU                                                       |
 |USB 1 / USB 2   | USB3.0 Host connector                                                           |
-|RJ45 1-4        | 100M / 1000M Ethernet RJ45 jack. </br>RJ45 1: fm1-mac5, RJ45 2: fm1-mac1, RJ45 3: fm1-mac6, RJ45 4: fm1-mac10. |
+|[RJ45 1-4](#rj45-1-4)  | 100M / 1000M Ethernet RJ45 jack                                                 |
 |ECU Connector 1 | MCU breakout Hirose GT25 40pin ECU connector 1 (GT25-40DS-HU), fit with cable 1 |
 |ECU Connector 1 | MPU breakout Hirose GT25 40pin ECU connector 1 (GT25-40DS-HU), fit with cable 2 |
 |ttyUSB 1        | Micro USB to Serial port for MCU                                                |
@@ -52,9 +52,28 @@
 |Mini PCIe       | x1: PCIe Gen2; USB2.0. Half-size, full-size.                                    |
 |JTAG 1          | JTAG port for MCU                                                               |
 |JTAG 2          | JTAG port for MPU                                                               |
-|Jmp 1           | Jumper 1 |
-|Jmp 2/3         | Jumper 2 and 3, choose to boot from Micro SD / EMMC </br> Default: NON, boot from SD|
+|[Jmp 1/2/3](#jmp-1-3)  | Jumper 1/2/3, choose to boot from Micro SD / EMMC                               |
 |DIP switch      | DIP switch |
+
+#### RJ45 1-4
+
+The four RJ45 jack are for internal/external Ethernet connection.
+
+- RJ45 1: fm1-mac5
+- RJ45 2: fm1-mac1
+- RJ45 3: fm1-mac6
+- RJ45 4: fm1-mac10.
+
+To connect to PCU board, please use RJ45 2/3/4. While for Internet access from PCU, please connect the PCU to router from RJ45 1.
+
+For more information about network settings, please go to : [Connect from PC](Pcu_setup.md#connect-from-pc)
+
+#### Jmp 1-3
+
+There 3 jumpers are designed for switching boot device between Micro SD and EMMC. They should be set as a group, which means all the 3 jumpers should be set to same way, different settings among them may cause system boot failure.
+
+- Short pin 1 to pin 2: boot from EMMC
+- Short pin 2 to pin 3: boot from SD
 
 ### ECU Connector Cable
 
@@ -86,9 +105,13 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 ### EMMC
 
-The size of internal EMMC storage is 64GB.
+The size of internal EMMC storage is 64GB. To enable EMMC and boot from it, please short pin 1 to pin 2 of Jmp 1-3 as described in the the section above.
 
 ### External SD
 
 The minimum recommended card size is 64GB, and the speed should be at least class 10 A1, it is strongly recommended to use high speed SD card, e.g. class U3, A2. 
+
+The system image need to be flashed first using another PC. Please refer to [Flash Base MPU image](Pcu_setup.md#flash-base-mpu-image) .
+
+To enable SD and boot from it, please short pin 2 to pin 3 of Jmp 1-3 as described in the the section above.
 

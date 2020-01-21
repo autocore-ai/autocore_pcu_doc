@@ -9,13 +9,24 @@
   - MPU SDK   -> 0.1.2  
   - MCU SDK   -> 0.1.0  
   - IDE Tool  -> 0.1.53  
+- [20200115 Release Package](https://drive.google.com/drive/folders/1F0tlbMCM7lO5IDlPPUWFtif8Xhl8I2G7):
+  - MPU image -> 0.2  
+  - Simulator -> 0.1.7
 
-### MPU images
+### MPU Image
 
 MPU images for PCU dev board v1.0 is based on Ubuntu 18.04 and ROS Melodic.  
 For more information about the features of the image, please go to: [PCU Specification](Pcu_specification.md)
 
-| Version | Notes | Link |
+#### MPU Image for EMMC
+
+| Version   | Notes     | Link |
+| :-------: | --------- | ---- |
+|**0.2** <br> 16/Jan/2020| Add EMMC support <br> PCIe driver | [autocore-mpu-ubuntu18.04-0.2-20200116](https://drive.google.com/file/d/1Pl5UcRnBJ83lGZ8qg7_hdLSfWDwRtLyV/view) <br> Md5: 1607ec26dae2653b6f02f7e80107161d|
+
+#### MPU Image for SD card
+
+| Version   | Notes     | Link |
 | :-------: | --------- | ---- |
 |**0.1** <br> 23/Dec/2019| Initial version | [autocore-mpu-ubuntu18.04-0.1-20191223](https://drive.google.com/file/d/14NLV8Xa01IUx5aRhvm6GW-ZFCZOtWcWw/view) <br> Md5: a255e74b9c0e0b9fc608f07d61feff5f|
 
@@ -48,7 +59,9 @@ To get the full feature list of these packages, please go to: [SDK feature list]
 
 ### Simulation
 
-Will be available soon.
+|      Version               | Type   |  Notes    | Link |
+| :------------------------: | :----: | --------- | ---- |
+| **0.1.7** <br> 16/Jan/2020 | Windows| Initial release  | [simu-0.1.7-20200116](https://drive.google.com/file/d/1zJPvnKSwlYfVd_1DS0GrwskQh6KDcyM_/view) <br> Md5: 2922c5f80bae4d10af07ba7e7f59fa5f |
 
 ### Map resources
 
