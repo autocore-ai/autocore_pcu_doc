@@ -6,9 +6,9 @@ For image deploy, please refer to [Flash EMMC](Pcu_setup.md#flash-emmc)
 
 ## Download Source Code
 
-VCS  tool will be used for code download.
+VCS  tool will be used for source code download.
 
-Download `1046a.repos` from MPU github project page.
+Generate `1046a.repos` file according to https://gitlab.com/autocore_publish/mpu/flexbuild/-/wikis/home
 
 ```bash
 # Install VCS
@@ -63,7 +63,7 @@ The following three files will be required for installation of the built image.
 1. `bootpartition_LS_arm64_Its_4.14.tgz` is for SD card or EMMC partition  
    Note: `bootpartition_LS_arm64_Its_4.14_time.tgz` is generated according to build time, `bootpartition_LS_arm64_Its_4.14.tgz` is the latest.
 
-2. `firmware_ls1046afrwy_uboot_sdboot.img` is Boot for SD card
+2. `firmware_ls1046afrwy_uboot_sdboot.img` is Boot for SD card  
    `firmware_ls1046afrwy_uboot_qspiboot.img` is Boot for QSPI  
    Please choose according to your boot device.
    
