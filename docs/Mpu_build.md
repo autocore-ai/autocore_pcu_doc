@@ -39,19 +39,19 @@ $ flex-builder -m ls1046afrwy -a arm64
 $ flex-builder -c linux -a arm64
 
 # Build ubuntu rootfs
-$ flex builder-i mkrfs-a arm64  
+$ flex-builder -i mkrfs -a arm64  
 
 # Build uboot for sd card of ls1046afrwy
-$ flex builder-c uboot-m ls1046afrwy-b sd 
+$ flex-builder -c uboot -m ls1046afrwy -b sd 
 
 # Build uboot for QSPI of ls1046afrwy
-$ flex builder-c uboot-m ls1046afrwy-b qspi
+$ flex-builder -c uboot -m ls1046afrwy -b qspi
 
 # Compress ubuntu rootfs to *.tgz
 $ flex-builder -i compressrfs -a arm64 
 
 # Clean files except ubuntu rootfs
-$ flex builder clean 
+$ flex-builder clean 
 ```
 ## Target Files
 
