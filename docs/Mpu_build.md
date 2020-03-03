@@ -47,6 +47,9 @@ $ flex-builder -c uboot -m ls1046afrwy -b sd
 # Build uboot for QSPI of ls1046afrwy
 $ flex-builder -c uboot -m ls1046afrwy -b qspi
 
+# Build bootpartition
+$ flex-builder -i mkbootpartition -a arm64
+
 # Compress ubuntu rootfs to *.tgz
 $ flex-builder -i compressrfs -a arm64 
 
