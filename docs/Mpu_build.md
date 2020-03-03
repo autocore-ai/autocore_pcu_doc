@@ -53,7 +53,7 @@ $ flex-builder -i mkbootpartition -a arm64
 # Compress ubuntu rootfs to *.tgz
 $ flex-builder -i compressrfs -a arm64 
 
-# Clean files except ubuntu rootfs
+# Clean files except ubuntu rootfs (NOTE: this will also delete boot partition and firmware image)
 $ flex-builder clean 
 ```
 ## Target Files
