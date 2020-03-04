@@ -220,6 +220,75 @@ To install MPU image(without SDK) on an SD card, you will need another PC with a
 
     The MPU reset button (SW1500) lies next to the main switch, press it to reset.
 
+#### Flash QSPI
+
+The on board 64M QSPI flash is reserved for boot and non-volatile data storage. Normally you do not need to flash it. Update of QSPI flash is only required when update boot or the Linux kernel in it. Please only flash it when you understand what you are doing and be aware that re-flash of QSPI incorrectly may cause loss of non-volatile data like MAC address.
+
+To flash QSPI, you need to **boot from EMMC or SD card**. Please refer to [PCU Hardware Manual](Pcu_hardware_manual.md#emmc) for hardware setup.
+
+Before you start, please record the **default MAC address** of all ports, as the flash process will erase the information. To read the current MAC address, enter Uboot:
+```bash
+bdinfo
+...
+eth0name    = FM1@DTSEC1
+ethaddr     = 00:02:34:23:39:f0
+eth1name    = FM1@DTSEC5
+eth1addr    = 00:02:34:23:39:f1
+eth2name    = FM1@DTSEC6
+eth2addr    = 00:02:34:23:39:f2
+eth3name    = FM1@DTSEC9
+eth3addr    = 00:02:34:23:39:f3
+eth4name    = FM1@DTSEC10
+eth4addr    = 00:02:34:23:39:f4
+...
+```
+
+1. Install TFTP tool
+
+   You could install any TFTP tool, for Ubuntu please install tftp and finish the configuration.
+
+   Set the path of image to be flashed.
+
+2. Enter Uboot and setenv
+
+   Power on the board, press any key during start up to enter Uboot mode.
+
+   Make the following configuration:
+
+   ```bash
+   setenv ipaddr 10.20.24.113   #PCU IP
+   setenv serverip 10.20.24.23  #PC IP
+   setenv ethaddr 00:04:9F:06:30:FE #PCU MAC address
+   saveenv
+   ```
+
+3. Upload image
+
+   `tftpboot 0xa0000000 firmware_ls1046afrwy_uboot_qspiboot.img`
+
+4. Erase memory
+
+   ```bash
+   sf probe 0:0
+   sf erase 0 + $filesize
+   ```
+
+5. Write image
+
+   `sf write 0xa0000000 0 $filesize`
+
+6. Post steps
+
+   As the flash process have erased all data, MAC address need to be set manually. Please set MAC address recored before:
+   ```bash
+   setenv ethaddr 00:02:34:23:39:f0
+   setenv eth1addr 00:02:34:23:39:f1
+   setenv eth2addr 00:02:34:23:39:f2
+   setenv eth3addr 00:02:34:23:39:f3
+   setenv eth4addr 00:02:34:23:39:f4
+   saveenv
+   ```
+
 ## Advanced network settings
 
 The network diagram of PCU is shown in figure below:  

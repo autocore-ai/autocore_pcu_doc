@@ -11,6 +11,10 @@
    - [Interface List](#interfaces-list)
    - [ECU Connector Cable](#ecu-connector-cable)
 4. [Boot Devices](#boot-devices)
+   - [QSPI Flash](#qspi-flash)
+   - [EMMC](#emmc)
+   - [External SD](#external-sd)
+
 
 ## PCU Block Diagram
 ![PCU block diagram](images/Pcu_block_diagram.png "PCU block diagram")
@@ -68,6 +72,11 @@ To connect to PCU board, please use RJ45 2/3/4. While for Internet access from P
 
 For more information about network settings, please go to : [Connect from PC](Pcu_setup.md#connect-from-pc)
 
+#### DIP switch
+
+- Boot from QSPI: switch 3 & 7 ON, others OFF.
+- Boot from EMMC/SD: switch 3 ON, others OFF.
+
 #### Jmp 1-3
 
 There 3 jumpers are designed for switching boot device between Micro SD and EMMC. They should be set as a group, which means all the 3 jumpers should be set to same way, different settings among them may cause system boot failure.
@@ -84,6 +93,8 @@ There 3 jumpers are designed for switching boot device between Micro SD and EMMC
 ### QSPI Flash
 
 There is a 64M QSPI flash on board which is reserved for boot and non-volatile data storage. It could be used for storage of data which user requires not to be erased during re flashing of system image. 
+
+To boot from QSPI flash, "DIP switch" should be set as: 3 & 7 ON, others OFF.
 
 This flash is formatted into two blocks as below:
 
@@ -105,13 +116,16 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 ### EMMC
 
-The size of internal EMMC storage is 64GB. To enable EMMC and boot from it, please short pin 1 to pin 2 of Jmp 1-3 as described in the the section above.
+The size of internal EMMC storage is 64GB. 
+
+To boot from EMMC, "DIP switch" should be set as: 3 ON, others OFF, "Jmp 1-3" should be set as: Short pin 1 to pin 2.
 
 ### External SD
 
 The minimum recommended card size is 64GB, and the speed should be at least class 10 A1, it is strongly recommended to use high speed SD card, e.g. class U3, A2. 
 
-The system image need to be flashed first using another PC. Please refer to [Flash Base MPU image](Pcu_setup.md#flash-base-mpu-image) .
+To boot from SD card, "DIP switch" should be set as: 3 ON, others OFF, "Jmp 1-3" should be set as: Short pin 2 to pin 3.
 
-To enable SD and boot from it, please short pin 2 to pin 3 of Jmp 1-3 as described in the the section above.
+For blank SD card, the system image need to be flashed first using another PC. Please refer to [Flash Base MPU image](Pcu_setup.md#flash-base-mpu-image) .
+
 
