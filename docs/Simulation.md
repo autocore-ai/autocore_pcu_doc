@@ -118,15 +118,18 @@ In our case we will use Autoware.AI running on PCU for planning features.
 
 As optional, you could also run Autoware.AI on the Windows PC with VM or WSL2. In this way, the 2nd PCU will not be required.
 
-1. Connect to PCU 2 via VNC using default user name and password.
+1. Change the Internal network IP of PCU 2 to a different one with PCU 1.  
+   For IP configuration, please refer to [Advanced Network Settings](Pcu_setup.md#advanced-network-settings)
 
-2. Set ROS_MASTER_URI according to PCU 1, ROS_IP according to PCU 2.
+2. Connect to PCU 2 via VNC using default user name and password.
 
-3. Download the Autoware.AI source code to PCU or transfer through network.
+3. Set ROS_MASTER_URI according to PCU 1, ROS_IP according to PCU 2.
 
-4. Build the project and source.
+4. Download the Autoware.AI source code to PCU or transfer through network.
 
-5. Launch the required planning nodes by Runtime Manager GUI or ROS commands.
+5. Build the project and source.
+
+6. Launch the required planning nodes by Runtime Manager GUI or ROS commands.
 
    The following three nodes are required to run the simulation.
 
