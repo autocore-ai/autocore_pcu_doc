@@ -8,8 +8,8 @@
    - [Simulator PC Requirement](#simulator-pc-requirement)
    - [Simulation Environment](#simulation-environment)
 3. [Quick Start](#quick-start)
-   - [Start PCU 1 with SDK](#start-pcu-1-with-sdk)
    - [Start Simulator](#start-simulator)
+   - [Start PCU 1 with SDK](#start-pcu-1-with-sdk)
    - [Start PCU 2 with Autoware.AI](#start-pcu-2-with-autowareai)
    - [Simulation process](#simulation-process)
 4. [Simulator Instruction](#simulator-instruction)
@@ -45,29 +45,14 @@ To use the simulator, you will need to build a simulation environment. In our ca
   - Localization
   - LiDAR perception
   - Traffic light detection (optional with TPU accelerator)
-  - Control
   - Global planner
   - Local planner
+  - Waypoint follower
 - Simulator PC (Windows)
   - Simulator
   - AutoCore IDE
 
 ## Quick Start
-
-### Start PCU 1 with SDK
-
-After power on, PCU will automatically start runtime，and IDE tool is able to control the different functionalities. Roscore will start on PCU autonomously.
-
-Use IDE to start the following nodes, the nodes which are not listed in below shall not be started (Some nodes may be configured as auto start, but without actual function).
-
-*Will be updated later*
-
-- `sim_map_city`
-- `voxel_filter` (Auto start)
-- `pose_vel_connector` (Auto start)
-- `ndt_matching`, make sure to enable `init_pos_gnss` (Auto start)
-- `ray_ground_filter`, make sure to disable `output_ring`
-- `feat_proj`
 
 ### Start Simulator
 
@@ -80,20 +65,77 @@ Use IDE to start the following nodes, the nodes which are not listed in below sh
 3. Configure the ROSMaster IP and local IP, and choose the driving scenario, then click launch.  
    ![Simulation Launch](images/Simulation_launch.jpg "Simulation Launch") 
 
-4. If all the configuration is correct, you will see the main window of the simulator as below:  
+4. If the configuration is correct, you will see the main window of the simulator as below:  
    ![Simulation Main](images/Simulation_main.jpg "Simulation Main") 
 
 Once simulator is started and PCU is on，you will be able to see correct NDT location in IDE.
 
 Simulator will send out `/ndt_pose`, `/estimate_twist` and the TF for map to base_link transform. 
 
+### Start PCU 1 with SDK
+
+After power on, PCU will automatically start runtime，and IDE tool is able to control the different functionalities. Roscore will start on PCU automatically.
+
+Use IDE tool to start the following nodes, the nodes which are not listed in below shall not be started (Some nodes may be configured as auto start, but without actual function).
+
+![Simulation IDE](images/Simulation_ide.png "Simulation IDE")
+
+The following nodes are compulsory for simulation:
+
+- `sim_map_city`
+- `voxel_filter`
+- `ndt_matching` with `init_pos_gnss` enabled
+- `pose_vel_connector`
+
+The following nodes are optional depending on functions:
+
+- `ray_ground_filter`, make sure to disable `output_ring`
+- `cluster_dep`
+- `cluster_euc`
+- `gps_localizer`  
+  *To use this node, NDT node need to be stopped.*
+
+The following node is optional to use traffic light function:
+
+- `feat_proj`  
+   *This node is provided in MPU image, but need to build before use. Google TPU is compulsory for this function.*  
+   To build and launch this node:
+   ```bash
+   mkdir -p workspace/src
+   cp ~/Camera-ROS-Git workspace/src/
+   cd workspace/src
+   catkin_init_workspace
+   cd ..
+   catkin_make
+   # After build success
+   source devel/setup.bash
+   roslaunch traffic_light_detect traffic_light_detect.launch
+   ```
+
 ### Start PCU 2 with Autoware.AI
 
 In our case we will use Autoware.AI running on PCU for planning features.
 
-We will update instructions later.
+As optional, you could also run Autoware.AI on the Windows PC with VM or WSL2. In this way, the 2nd PCU will not be required.
 
-As optional, you could also run Autoware.AI on the Windows PC with VM or WSL2, so the 2nd PCU will not be required.
+1. Connect to PCU 2 via VNC using default user name and password.
+
+2. Download the Autoware.AI source code to PCU or transfer through network.
+
+3. Build the project and source.
+
+4. Launch the required planning nodes by Runtime Manager GUI or ROS commands.
+
+   The following three nodes are required to run the simulation.
+
+   - Global Planner  
+     `op_global_planner`
+
+   - Local Planner  
+     `op_local_planner` or `lane_planner`
+
+   - Waypoint follower  
+     `pure_pursuit`
 
 ### Simulation process
 
@@ -102,11 +144,11 @@ Now you could check whether all the topics are correctly sent from PCU, simulato
 1. Localization  
    Reset the car location in the simulator, and check in localization result of PCU in IDE. If the localization result is not matching with the car location in the simulator, please manually set the location in IDE.
 
-2. Set target  
-   Select a destination point in IDE, and wait for the global planner to calculate the route.
+2. Path planning 
+   Select a destination point in IDE, and wait for the global planner & local planner to calculate the route.
 
 3. Start the vehicle  
-   After enable the DBW of the vehicle, you should see the car starts moving in both IDE and simulator.
+   After enable the way point follower, you should see the car starts moving in both IDE and simulator.
 
 ## Simulator Instruction
 
