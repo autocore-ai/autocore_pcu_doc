@@ -62,7 +62,7 @@ To get the full feature list of these packages, please go to: [SDK feature list]
 
 |      Version                | OS    |  Notes    | Link |
 | :------------------------:  | :---: | --------- | ---- |
-| **0.2.17** <br> 21/Dec/2019 | Win   | **SDK version must be greater than 0.2**  <br> Support ROS2 <br> Add components navaigation by name <br> Compressed image msg visualization <br> Add visual console <br> Display component cpu usage, message freq <br> Improve performance and stability <br> | [autocore-ide-windows-0.2.17-20200323](https://drive.google.com/file/d/1gA38BLNpfnSENg7Q21BsgVPQabL-V34u/view) <br> Md5: 03a5877af6bc7a9329f84c2a88756af3 |
+| **0.2.17** <br> 23/Mar/2020 | Win   | **SDK version must be greater than 0.2**  <br> Support ROS2 <br> Add components navaigation by name <br> Compressed image msg visualization <br> Add visual console <br> Display component cpu usage, message freq <br> Improve performance and stability <br> | [autocore-ide-windows-0.2.17-20200323](https://drive.google.com/file/d/1gA38BLNpfnSENg7Q21BsgVPQabL-V34u/view) <br> Md5: 03a5877af6bc7a9329f84c2a88756af3 |
 |                             | Linux |           | [autocore-ide-linux-0.2.17-20200323](https://drive.google.com/file/d/1rOg2yxU7Uvh6R6uEmE90BcimfXWdbk5H/view) <br> Md5: 6c37a07418e000d2cc29e0c58ba8d844 |
 | **0.1.53** <br> 21/Dec/2019 | Win   | **SDK version must be greater than 0.1** | [autocore-ide-windows-0.1.53-20191221](https://drive.google.com/file/d/12X9zVqbQQIvNGs1aRTAlI1KpOOV9uTGd/view) <br> Md5: e030bbcfea0d60481fc367a1fb0a4f80 |
 |                             | Linux |           | [autocore-ide-linux-0.1.53-20191221](https://drive.google.com/file/d/1gNOxzZZ-XOFg78Ki6o7urVNnsw-pAf2Y/view) <br> Md5: aa5a09a477c676d8a48a93521dd5fe6c |
@@ -71,7 +71,7 @@ To get the full feature list of these packages, please go to: [SDK feature list]
 
 |      Version               | OS  |  Notes    | Link |
 | :------------------------: |:---:| --------- | ---- |
-| **0.1.11** <br> 16/Jan/2020| Win | Bug fix  | [simu-0.1.11-20200219](https://drive.google.com/file/d/1rsO1O1no-DhFAadZFFMuWRZkP-cc4t_7/view) <br> Md5: 481c9b83617abb6f7232cdcd133cfa4c |
+| **0.1.11** <br> 19/Feb/2020| Win | Bug fix  | [simu-0.1.11-20200219](https://drive.google.com/file/d/1rsO1O1no-DhFAadZFFMuWRZkP-cc4t_7/view) <br> Md5: 481c9b83617abb6f7232cdcd133cfa4c |
 | **0.1.7** <br> 16/Jan/2020 | Win | Initial release  | [simu-0.1.7-20200116](https://drive.google.com/file/d/1zJPvnKSwlYfVd_1DS0GrwskQh6KDcyM_/view) <br> Md5: 2922c5f80bae4d10af07ba7e7f59fa5f |
 
 ### Map resources
