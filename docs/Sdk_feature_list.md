@@ -32,8 +32,8 @@
   - [GNSS Localizer](#gnss-localizer)
   - [NDT_LiDAR](#ndt-lidar)
   - [EKF_GPS-IMU-ODOM](#ekf-gps-imu-odom)
-  - UKF_ODOM
-  - NDT_Radar
+  - UKF_NDT_ODOM
+  - Radar_Localizer
 - [Control]
   - MPC
   - Vehicle DBW Control
