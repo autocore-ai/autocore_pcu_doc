@@ -63,9 +63,11 @@ With standardized hardware architecture and optimized SDK, AutoCore could suppor
 
 5. [PCU SDK usage guide](docs/Sdk_guide.md) -AutoCore SDK usage manual.
 
-6. [Simulation guide](docs/Simulation.md) -Test run AutoCore in simulation environment with simulation tool.
+6. [Simulation guide](docs/Simulation.md) -Test run AutoCore SDK in simulation environment with simulator.
 
-7. [Vehicle test guide](docs/Vehicle_test_guide.md) -To setup test vehicle and run a simple field test.
+7. [Simulation with Autoware.AI](docs/Simulation_autoware.md) -Test Autoware.AI with Autocore Simulator.
+
+8. [Vehicle test guide](docs/Vehicle_test_guide.md) -To setup test vehicle and run a simple field test.
 
 
 ## Technical Specifications
