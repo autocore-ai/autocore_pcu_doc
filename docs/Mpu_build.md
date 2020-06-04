@@ -6,7 +6,7 @@ For image deploy, please refer to [Flash EMMC](Pcu_setup.md#flash-emmc)
 
 ## Download Source Code
 
-VCS  tool will be used for source code download.
+VCS tool is used for source code download.
 
 Generate `1046a.repos` file according to https://gitlab.com/autocore_publish/mpu/flexbuild/-/wikis/home
 

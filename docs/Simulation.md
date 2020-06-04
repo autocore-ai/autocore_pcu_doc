@@ -24,6 +24,9 @@
 
 AutoCore simulation tool is developed based on Unity engine, which focuses kinematics principle of the vehicle and environment. It could simulate multi type of sensor inputs according to different driving cases and user configurable environmental conditions, so that the autonomous driving system could be tested and tuned in loop.
 
+> NOTE: This guideline works with Autocore SDK and Autocore Simulator. If you would like to run Autoware.AI with Autocore simulator, please refer to:   
+> [Simulation with Autoware.AI](docs/Simulation_autoware.md)
+
 ## Requirement
 
 ### Simulator PC Requirement
@@ -36,7 +39,7 @@ Free disk：>1GB
 
 ### Simulation Environment
 
-To use the simulator, you will need to build a simulation environment. In our case, we use one PC and two PCU dev boards.
+To use the simulator, you will need to build a simulation environment. In our case, we use one PC and two PCU dev boards. 
 
 ![Simulation Environment](images/Simulation_env.jpg "Simulation Environment")
 

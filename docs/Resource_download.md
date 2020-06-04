@@ -69,6 +69,10 @@ To get the full feature list of these packages, please go to: [SDK feature list]
 
 ### Simulation
 
+AutoCore Simulator is now open source on Github, so later versions will not be updated here. Please download from AutoCore Simulator Github release page:
+
+https://github.com/autocore-ai/autocore_sim/releases
+
 |      Version               | OS  |  Notes    | Link |
 | :------------------------: |:---:| --------- | ---- |
 | **0.1.11** <br> 19/Feb/2020| Win | Bug fix  | [simu-0.1.11-20200219](https://drive.google.com/file/d/1rsO1O1no-DhFAadZFFMuWRZkP-cc4t_7/view) <br> Md5: 481c9b83617abb6f7232cdcd133cfa4c |
