@@ -57,6 +57,10 @@ To use the simulator, you will need to build a simulation environment. In our ca
 
 ## Quick Start
 
+### Start rviz
+1. Start rviz at laptop connected to this network(ROS1 should be installed on this pc)
+
+
 ### Start Simulator
 
 1. Download the simulator archive file, and extract it to a customized destination.  
@@ -71,9 +75,9 @@ To use the simulator, you will need to build a simulation environment. In our ca
 4. If the configuration is correct, you will see the main window of the simulator as below:  
    ![Simulation Main](images/Simulation_main.jpg "Simulation Main") 
 
-Once simulator is started and PCU is on，you will be able to see correct NDT location in IDE.
+Once simulator is started and PCU is on，you will be able to see points map, vector map and correct NDT location in RVIZ.
 
-Simulator will send out `/ndt_pose`, `/estimate_twist` and the TF for map to base_link transform. 
+Simulator will send out `/points_map`,`vector_map`,`/gnss_pose`,`/estimate_twist` and the TF for map to base_link transform. 
 
 ### Start PCU 1 with SDK
 
@@ -84,8 +88,7 @@ Use IDE tool to start the following nodes, the nodes which are not listed in bel
 ![Simulation IDE](images/Simulation_ide.png "Simulation IDE")
 
 The following nodes are compulsory for simulation:
-
-- `sim_map_city`
+ 
 - `voxel_filter`
 - `ndt_matching` with `init_pos_gnss` enabled
 - `pose_vel_connector`
@@ -126,13 +129,39 @@ As optional, you could also run Autoware.AI on the Windows PC with VM or WSL2. I
 
 2. Connect to PCU 2 via VNC using default user name and password.
 
-3. Set ROS_MASTER_URI according to PCU 1, ROS_IP according to PCU 2.
+3. Distribute Autoware.ai 1.14 as following steps:
 
-4. Download the Autoware.AI source code to PCU or transfer through network.
+    ```bash
+    mkdir ~/shared_dir && cd ~/shared_dir  
+    ```
+   - copy file "autoware.ai-planner-simu.launch" to folder   
+   ```bash 
+   wget -O run.sh https://gitlab.com/autowarefoundation/autoware.ai/docker/raw/master/generic/run.sh?inline=false 
 
-5. Build the project and source.
+   sudo chmod +x run.sh
 
-6. Launch the required planning nodes by Runtime Manager GUI or ROS commands.
+   . run.sh --ros-distro melodic --tag-prefix 1.14.0 --cuda off --image autoware/arm64v8
+
+   ```
+   - Make sure distribute Autoware.ai 1.14 docker successfully 
+
+4. Enter docker view
+
+5. Set ROS_MASTER_URI according to PCU 1, ROS_IP according to PCU 2. 
+
+6. Input following commands
+   ```bash
+   source /opt/ros/melodic/setup.bash
+   source ~/Autoware/install/setup.bash
+   ```
+7. Open folder "~/shared_folder", then input following commands:
+
+   ```bash
+   roslaunch autoware.ai-planner-simu autoware.ai-planner-simu.launch
+   ```
+   This launch file can start all the planner nodes quickly, if you want to start planner step by step then jump to step 8, otherwise jump to step 9.
+
+8. Launch the required planning nodes by Runtime Manager GUI or ROS commands.
 
    The following three nodes are required to run the simulation.
 
@@ -144,6 +173,8 @@ As optional, you could also run Autoware.AI on the Windows PC with VM or WSL2. I
 
    - Waypoint follower  
      `pure_pursuit`
+
+9. Set target point at rviz, then planner will drive ego car at simulation automatically
 
 ### Simulation process
 
