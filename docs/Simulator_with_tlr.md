@@ -83,12 +83,14 @@ Simulator will send out `/points_map`,`vector_map`,`/gnss_pose`,`/estimate_twist
 
 After power on, PCU will automatically start runtime，and IDE tool is able to control the different functionalities. Roscore will start on PCU automatically.
 
-Use IDE tool to start the following nodes, the nodes which are not listed in below shall not be started (Some nodes may be configured as auto start, but without actual function).
+Use IDE tool to start the following nodes, the nodes which are not listed in below shall not be started (Some nodes may be configured as auto start, but without actual function).  
+![Simulation Ide1](images/Simulation_ide1.png "Simulation Ide 1")  
+![Simulation Ide2](images/Simulation_ide2.png "Simulation Ide 2") 
+![Simulation Ide3](images/Simulation_ide3.png "Simulation Ide 3") 
+![Simulation Ide4](images/Simulation_ide4.png "Simulation Ide 4") 
 
-![Simulation IDE](images/Simulation_ide.png "Simulation IDE")
 
 The following nodes are compulsory for simulation:
- 
 - `voxel_filter`
 - `ndt_matching` with `init_pos_gnss` enabled
 - `pose_vel_connector`
@@ -112,10 +114,10 @@ The following node is optional to use traffic light function:
    cd workspace/src
    catkin_init_workspace
    cd ..
-   catkin_make
+   catkin_make(There\'s known bug, if there\'re error when compile codes, please execute this command again)
    # After build success
    source devel/setup.bash
-   roslaunch traffic_light_detect traffic_light_detect.launch
+   roslaunch front_detect front_detect.launch
    ```
 
 ### Start PCU 2 with Autoware.AI
@@ -174,7 +176,14 @@ As optional, you could also run Autoware.AI on the Windows PC with VM or WSL2. I
    - Waypoint follower  
      `pure_pursuit`
 
-9. Set target point at rviz, then planner will drive ego car at simulation automatically
+9. Set target point at rviz, then planner will drive ego car at simulation automatically.
+
+### Test TLR
+1. Add node /tlr_superimpose_image/Image at RVIZ，a samll window will display TLR recognition results at RVIZ.
+![TLR configuration](images/tlr_configuration.png "TLR configuration")  
+![TLR display](images/tlr_display.png "TLR display")  
+
+
 
 ### Simulation process
 
@@ -239,6 +248,7 @@ The monitor shows the current ego vehicle information, and draws diagram with hi
 - "A": Left turn
 - "D": Right turn
 - "X": Brake
+- "Ctrl + A" Exchange dirve mode between ROS Diving and Manuual Driving
 
 ### Log
 
@@ -255,9 +265,10 @@ Publications:
 * /points_raw [sensor_msgs/PointCloud2]  
 * /tf [tf2_msgs/TFMessage]  
 * /vehicle_status [autoware_msgs/VehicleStatus]  
+* /tlr_superimpose_image [Camera/DepthCloud/Image]
 
 Subscriptions:  
 * /ide_cmd [unknown type]  
 * /twist_cmd [geometry_msgs/TwistStamped]  
-
+* /Camera [Camera/DepthCloud/Image]
 
