@@ -9,14 +9,14 @@
   - MPU SDK   -> 0.2.0   
   - IDE Tool  -> 0.2.17  
   - Simulator -> 0.1.11  
+- [20200115 Release Package](https://drive.google.com/drive/folders/1F0tlbMCM7lO5IDlPPUWFtif8Xhl8I2G7):
+  - MPU image -> 0.2  
+  - Simulator -> 0.1.7
 - [20191220 Release Package](https://drive.google.com/drive/folders/1bpyKItOvdNnwq9LrJNWNsJiK1Cw5GEaG):  
   - MPU image -> 0.1  
   - MPU SDK   -> 0.1.2  
   - MCU SDK   -> 0.1.0  
   - IDE Tool  -> 0.1.53  
-- [20200115 Release Package](https://drive.google.com/drive/folders/1F0tlbMCM7lO5IDlPPUWFtif8Xhl8I2G7):
-  - MPU image -> 0.2  
-  - Simulator -> 0.1.7
 
 ### MPU Image
 
