@@ -270,12 +270,12 @@ eth4addr    = 00:02:34:23:39:f4
 
    ```bash
    sf probe 0:0
-   sf erase 0 + $filesize
+   sf erase 0 +$filesize
    ```
 
 5. Write image
 
-   `sf write 0xa0000000 0 $filesize`
+   `sf write 0xa0000000 0$filesize`
 
 6. Post steps
 
