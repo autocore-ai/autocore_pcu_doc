@@ -275,7 +275,7 @@ eth4addr    = 00:02:34:23:39:f4
 
 5. Write image
 
-   `sf write 0xa0000000 0$filesize`
+   `sf write 0xa0000000 0 $filesize`
 
 6. Post steps
 
