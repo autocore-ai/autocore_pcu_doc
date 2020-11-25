@@ -79,9 +79,9 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 ### MPU Software
 | Item           | Description                     |  System image  | Open Source | AutoCore SDK   |
 | -------------  | -------------                   | :------------: | :---------: | :------------: |
-| Operation System| Ubuntu 18.04                   |        x       |      x      |                |
+| Operation System| Ubuntu 20.04                   |        x       |      x      |                |
 | Kernel         | LTS kernel 4.14                 |        x       |      x      |                |
-| MiddleWare     | ROS Melodic, ROS2 Dashing       |        x       |      x      |                |
+| MiddleWare     |                                 |        x       |      x      |                |
 | PCI-E Driver   | PCI-E driver to support Accelerators (edgeTPU, Movidius) | x | |                |
 | LiDAR driver   | Velodyne driver, Robosense driver|       x       |             |                |
 | Camera driver  | UVC camera driver, GigE camera  |        x       |             |                |
