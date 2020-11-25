@@ -81,19 +81,9 @@ PCU (Perception computer unit) Dev Board v1.0, designed by AutoCore under 96Boar
 | -------------  | -------------                   | :------------: | :---------: | :------------: |
 | Operation System| Ubuntu 20.04                   |        x       |      x      |                |
 | Kernel         | LTS kernel 4.14                 |        x       |      x      |                |
-| MiddleWare     |                                 |        x       |      x      |                |
 | PCI-E Driver   | PCI-E driver to support Accelerators (edgeTPU, Movidius) | x | |                |
 | LiDAR driver   | Velodyne driver, Robosense driver|       x       |             |                |
 | Camera driver  | UVC camera driver, GigE camera  |        x       |             |                |
-| Localization   | LiDAR NDT                       |                |             |        x       |
-| Localization   | GNSS/IMU/ODOM EKF fusion        |                |             |        x       |
-| LiDAR detector | Euclidean cluster, depth cluster|                |             |        x       |
-| LiDAR tracker  | IMM UKF PDA tracker             |                |             |        x       |
-| Camera (with accelerator)| Object detection, traffic light, lane mark |  |      |        x       | 
-| Fusion/Filter  | Multi LiDAR fusion, EKF, points down sampler, points preprocessor|  |     |  x  |
-| Fusion/Filter  | LiDAR/Radar/Camera fusion       |                |             |        x       |
-| Map            | Vector map / HD map support port|                |             |        x       |
-| Runtime IDE client | AutoCore runtime IDE tool   |                |             |        x       |
 
 ### Tools
 | Item           | Description    | Open Source  | AutoCore SDK   |
