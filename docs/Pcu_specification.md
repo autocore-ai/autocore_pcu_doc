@@ -21,8 +21,9 @@ PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boar
 ## Hardware
 | Item           | Description   |
 | -------------  | ------------- |
-| MCU            | TI TMS570LC4357 (32-bit ARM Dual-Core Cortex-R5F) Automotive-grade micro controller |
-| MPU            | NXP LS1046A (64-bit ARM Quad-Core Cortex-A72) |
+| MCU            | TI TMS570LC4357 (32-bit ARM Dual-Core Cortex-R5F) Automotive Microcontroller |
+| MPU            | NXP LS1046A (64-bit ARM Quad-Core Cortex-A72 CPU) |
+| Main Frequency | 1.8GHz |
 | Memory         | 8GB DDR4 |
 | Storage        | 64MB QSPI NOR, 64GB eMMC flash, Micro SD |
 | Ethernet switch| NXP SJA1105s Automotive Ethernet Switch(5 1000M ports) |
@@ -34,23 +35,28 @@ PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boar
 ## Interfaces
 | Item           | Description   |
 | -------------  | ------------- |
-| CAN bus port   | x4            |
 | Ethernet RJ45 jack | x4：100BASE-T1/ 1000BASE-T1 |
-| Ignition input | x1            |
 | USB3.0  Host connector | x2            |
-| Micro USB connector    | x2            |
+| Micro SD card slot   | x1              |
 | Mini PCIe slot | x1: PCIe Gen2; USB2.0 |
 | M.2 NGFF slot  | x1: PCIe Gen2 |
 | Micro USB Connector| x1 |
-| UART ports     | x6 RS232 serial interface ports|
-| PPS IO ports   | x1 PPS input port; x4 PPS output ports|
-| ADC input      | x1            |
+| Vehicle ECU Interface | 64Pins automotive connector (3.3V I/O level) |
+|                | PPS input: x1 |
+|                | PPS outputs: x4 |
+|                | CAN 2.0 ports: x4            |
+|                | ADC input: x1 |
+|                | Vehicle DC input: 9-36V |
+|                | Ethernet ports: x3 100BASE-T1|
+|                | UART ports: x4 RS232 |
+|                | Digital IO input: x1 (optional) |
+|                | Digital IO output: x3 (optional) |
+|                | 5V DC output: x1 (optional) |
 | JTAG  debug connector | x2 |
 | FAN connector  | x1 |
-| Expansion Interface | 64Pins automotive connector (3.3V I/O level) |
+| DC Jack        | 9-36V |
 | RF Antenna Interface |4G-LTE: x4;  C-V2X: x2; WiFi 2.4G/5G: x4 (optional) |
-| Micro SD card slot   | x1 (optional) |
-| Digital IO ports | x3 (optional) |
+
 
 ## Block diagram
 ![PCU block diagram](images/Pcu_block_diagram.png "PCU block diagram")
