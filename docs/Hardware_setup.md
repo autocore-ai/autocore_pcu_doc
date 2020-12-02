@@ -63,16 +63,16 @@ If you are planning to deploy in vehicle for test purpose, the vehicle must be m
 ### AutoCore Reference Platform
 
 - Central Computing System 
-  - AutoCore PCU x 1
-  - Nvidia Jetson Xavier AGX x 2
+	- AutoCore PCU x 1
+	- Nvidia Jetson Xavier AGX x 2
 - Sensors
-  - [LiDAR] Robosense RS-LiDAR-32 x1
-  - [Camera] FLIR Firefly S(1.6MP) x5
-  - [GNSS] U-Blox NEO-M8
-  - [IMU] Xsens MTI-30
-  - [Rdar] Continental ARS408-21
+	- [LiDAR] Robosense RS-LiDAR-32 x1
+	- [Camera] FLIR Firefly S(1.6MP) x5
+	- [GNSS] U-Blox NEO-M8
+	- [IMU] Xsens MTI-30
+	- [Rdar] Continental ARS408-21
 - DBW Vehicle
-  - BYD Qin EV
+	- BYD Qin EV
 - Visulization
   - Intel NUC 6i7
   - Monitor x2
