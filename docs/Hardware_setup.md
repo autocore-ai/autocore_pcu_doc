@@ -8,7 +8,9 @@
 
 The key hardware components required to get the system working include:
 
-- Central Computing System ─ [AutoCore PCU dev board v1.0](Pcu_specification.md)
+- Central Computing System 
+	- [AutoCore PCU](Pcu_specification.md)
+	- Nvidia Jetson Xavier AGX
     - For other options please refer to [Supported Hardware List](Supported_hardware_list.md)
 - Global Navigation Satellite System (GNSS) —  Support standard NMEA, like:
     - Broadgnss RAC-P1
@@ -58,6 +60,22 @@ If you are planning to deploy in vehicle for test purpose, the vehicle must be m
 > :warning:**Warning: Please be noted that this system could only be use for test purpose with speed < 40 km/h in disclosed testing field, safety drivers (one or two) are mandatory to monitor the system and take proper reactions when required.**
 
 
-### AutoCore default
+### AutoCore Reference Platform
 
-TO DO
+- Central Computing System 
+  - AutoCore PCU x 1
+  - Nvidia Jetson Xavier AGX x 2
+- Sensors
+  - [LiDAR] Robosense RS-LiDAR-32 x1
+  - [Camera] FLIR Firefly S(1.6MP) x5
+  - [GNSS] U-Blox NEO-M8
+  - [IMU] Xsens MTI-30
+  - [Rdar] Continental ARS408-21
+- DBW Vehicle
+  - BYD Qin EV
+- Visulization
+  - Intel NUC 6i7
+  - Monitor x2
+
+The computing system architecture of the reference platform is show as below:  
+![Hardware reference platform](images/Pcu_reference_platform.jpg)
