@@ -72,7 +72,7 @@ PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boar
 | Operation System| FreeRTOS 9.0                   |        x       |      x      |                |
 | MiddleWare     | eProsima Micro XRCE-DDS         |        x       |             |                |
 | Time service   | Time service (PTP client)       |        x       |             |                |
-| CAN-Eth router | 4 x CAN-Ethernet router service |     x       |             |        x       |
+| CAN-Eth router | 4 x CAN-Ethernet router service |        x       |             |        x       |
 | Vehicle info   | Vehicle information from CAN    |                |             |        x       |
 | Vehicle DBW    | Vehicle drive-by-wire CAN interface|             |             |        x       |
 | Runtime framework| AutoCore runtime framework    |                |             |        x       |
@@ -114,10 +114,11 @@ PCU board follows 96Boards open standard, and it is compatible with Autoware ope
 
 1. **Single board application:**   
     - Central ECU for L2/L3 ADAS functions.
+    - Centual Gateway
     - Drive-by-wire safe controller of autonomous driving vehicle.
-    - Object detection and fusion based on LiDAR and radar.
     - High resolution localization module.
     - HD map construction.
+    - Data logging device for L4 vehicle.
 
 2. **Double board application:**
     - Full redundancy system.
