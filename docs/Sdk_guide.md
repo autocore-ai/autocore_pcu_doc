@@ -18,6 +18,8 @@ You should have the following items:
 - PC (Windows or Linux) to run AutoCore IDE tool
 - Sensors and connection cables
 
+> **NOTE:** Please be aware that current SDK is based on ROS1, so it could only support PCU v1.0. For PCU v2.0, new SDK based on ROS2 will be provided later. 
+
 ## General setup
 
 1. Connect PC with PCU via Ethernet
