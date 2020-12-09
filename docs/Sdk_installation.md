@@ -11,7 +11,7 @@
 ## How to install on MPU
 
 ### Pre conditions
-You should have a PCU dev board with pre-installed system (Ubuntu 18.04 and ros-melodic). To install latest SDK package, it is recommended to flash the system image first. Here is the instruction of how to flash: [PCU setup guide](Pcu_setup.md#flash-operating-system-images).  
+You should have a PCU dev board v1.0 with pre-installed system (Ubuntu 18.04 and ros-melodic). To install latest SDK package, it is recommended to flash the system image first. Here is the instruction of how to flash: [PCU setup guide](Pcu_setup.md#flash-operating-system-images).  
 
 Official images with recommended OS and middle-ware are available on AutoCore [Resource Download page](Resource_download.md#mpu-images).
 
