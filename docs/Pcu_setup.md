@@ -174,18 +174,9 @@ The on-board EMMC size is 64GB. Be sure to connect Jmp 1-3 to right position (1-
     `$ run qspi_bootcmd`
     The default user name for QSPI system is `root`.
 
-3. Partition and format EMMC storage drive
+3. Install from USB
 
-    `$ flex-installer -i pf -d /dev/mmcblk0`
-
-4. Install from USB
-
-    Mount the USB drive(/dev/sda1 in this case)  
-    `$ mount -t vfat /dev/sda1 /tmp/`   
-    Make sure the five files "setup.env", "flex-installer", "bootpartition_LS_arm64_lts_4.14.tgz", "rootfs_ubuntu_bionic_LS_arm64.tgz", and "firmware_ls1046afrwy_uboot_emmcboot.img" are in the USB drive.  
-    `$ cd /tmp/nxp_img` （The files are stored in nxp_img folder in this case）  
-    `$ ./setup.env`  
-    `$ flex-installer -b bootpartition_LS_arm64_lts_4.14.tgz -r rootfs_ubuntu_bionic_LS_arm64.tgz -f firmware_ls1046afrwy_uboot_emmcboot.img -d /dev/mmcblk0`   
+    `sudo gzip -dc  /run/media/sda1/autocore-1046-ubuntu-20.04-emmc-pcu2.0-sw0.5.0-20201210.gz |sudo dd of=/dev/mmcblk0`   
 
 #### Flash SD card
 
