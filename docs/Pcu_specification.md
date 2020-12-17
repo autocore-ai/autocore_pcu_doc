@@ -70,7 +70,6 @@ PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boar
 | Item           | Description                     |  System image  | Open Source | AutoCore SDK   |
 | -------------  | -------------                   | :------------: | :---------: | :------------: |
 | Operation System| FreeRTOS 9.0                   |        x       |      x      |                |
-| MiddleWare     | eProsima Micro XRCE-DDS         |        x       |             |                |
 | Time service   | Time service (PTP client)       |        x       |             |                |
 | CAN-Eth router | 4 x CAN-Ethernet router service |        x       |             |        x       |
 | Vehicle info   | Vehicle information from CAN    |                |             |        x       |
@@ -83,7 +82,7 @@ PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boar
 | Operation System| Ubuntu 20.04                   |        x       |      x      |                |
 | Kernel         | LTS kernel 4.14                 |        x       |      x      |                |
 | MiddleWare     | ROS / ROS2                      |        x       |      x      |                |
-| Eth-CAN client | Ethernet-CAN router client      |        x       |             |        x       |
+| Eth-CAN client | Ethernet-CAN router client      |        x       |      x      |        x       |
 | PCI-E Driver   | PCI-E driver to support Accelerators (edgeTPU, Movidius) | x | |                |
 | LiDAR driver   | Velodyne driver, Robosense driver|       x       |             |                |
 | Camera driver  | UVC camera driver, GigE camera  |        x       |             |                |
@@ -105,7 +104,7 @@ PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boar
 | -------------  | -------------  | :----------: | :------------: |
 | V-Map          | Vector map editor|       x    |        x       |
 | PCD Map         | Point cloud map builder|     |        x       |
-| Simulation     | Simulation tool and test scenarios|  |  x      |
+| Simulation     | Simulation tool and test scenarios| x |  x     |
 | Runtime IDE    | AutoCore runtime framework management tool| | x|
 
 

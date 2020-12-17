@@ -70,7 +70,7 @@ If you are planning to deploy in vehicle for test purpose, the vehicle must be m
 	- [Camera] FLIR Firefly S(1.6MP) x5
 	- [GNSS] U-Blox NEO-M8
 	- [IMU] Xsens MTI-30
-	- [Rdar] Continental ARS408-21
+	- [Radar] Continental ARS408-21
 - DBW Vehicle
 	- BYD Qin EV
 - Visulization
