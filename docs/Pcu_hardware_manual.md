@@ -3,17 +3,22 @@
 > The *PCU Hardware Manual* provides the detailed information of the PCU dev board, e.g. interfaces, cables, hardware settings, etc.
 
 ## Table of Contents
-1. [PCU Block Diagram](#pcu-block-diagram)
-2. [PCU Schematic](#pcu-schematic)
-3. [Interfaces](#interfaces)
-   - [PCU Interfaces Front View](#pcu-interfaces-front-view)
-   - [PCU Interfaces Top View](#pcu-interfaces-top-view)
-   - [Interface List](#interfaces-list)
-   - [ECU Connector Cable](#ecu-connector-cable)
-4. [Boot Devices](#boot-devices)
-   - [QSPI Flash](#qspi-flash)
-   - [EMMC](#emmc)
-   - [External SD](#external-sd)
+- [PCU Hardware Manual](#pcu-hardware-manual)
+  - [Table of Contents](#table-of-contents)
+  - [PCU Block Diagram](#pcu-block-diagram)
+  - [PCU Schematic](#pcu-schematic)
+  - [Interfaces](#interfaces)
+    - [PCU Interfaces Front View](#pcu-interfaces-front-view)
+    - [PCU Interfaces Top View](#pcu-interfaces-top-view)
+    - [Interfaces List](#interfaces-list)
+      - [RJ45 1-4](#rj45-1-4)
+      - [DIP switch](#dip-switch)
+      - [SW1](#sw1)
+    - [ECU Connector Cable](#ecu-connector-cable)
+  - [Boot Devices](#boot-devices)
+    - [QSPI Flash](#qspi-flash)
+    - [EMMC](#emmc)
+    - [External SD](#external-sd)
 
 
 ## PCU Block Diagram
@@ -38,11 +43,8 @@
 | Item           | Description                         |
 | -------------- | ----------------------------------- |
 |DC IN           | DC input for PCU board, 12V 60W                                                 |
-|SW 1            | Main power switch for PCU board                                                 |
-|Res 1           | Reset button for MPU                                                            |
-|Res 2           | Hard reset button for MCU                                                       |
-|Res 3           | Soft reset button for MCU                                                       |
-|USB 1 / USB 2   | USB3.0 Host connector                                                           |
+|Res             | Reset button for MCU and MPU                                                       |
+|USB 1 / USB 2   | USB3.0 Host connector                                                 |
 |[RJ45 1-4](#rj45-1-4)  | 100M / 1000M Ethernet RJ45 jack                                                 |
 |ECU Connector 1 | MCU breakout Hirose GT25 40pin ECU connector 1 (GT25-40DS-HU), fit with cable 1 |
 |ECU Connector 1 | MPU breakout Hirose GT25 40pin ECU connector 1 (GT25-40DS-HU), fit with cable 2 |
@@ -56,8 +58,7 @@
 |Mini PCIe       | x1: PCIe Gen2; USB2.0. Half-size, full-size.                                    |
 |JTAG 1          | JTAG port for MCU                                                               |
 |JTAG 2          | JTAG port for MPU                                                               |
-|[Jmp 1/2/3](#jmp-1-3)  | Jumper 1/2/3, choose to boot from Micro SD / EMMC                               |
-|DIP switch      | DIP switch |
+|[SW1](#sw1)  | Choose default boot device from Micro SD / EMMC                               |
 
 #### RJ45 1-4
 
@@ -77,12 +78,10 @@ For more information about network settings, please go to : [Connect from PC](Pc
 - Boot from QSPI: switch 3 & 7 ON, others OFF.
 - Boot from EMMC/SD: switch 3 ON, others OFF.
 
-#### Jmp 1-3
+#### SW1
 
-There 3 jumpers are designed for switching boot device between Micro SD and EMMC. They should be set as a group, which means all the 3 jumpers should be set to same way, different settings among them may cause system boot failure.
-
-- Short pin 1 to pin 2: boot from EMMC
-- Short pin 2 to pin 3: boot from SD
+- ON. Default boot from SD if SD card plugged in.  
+- OFF. Default boot from EMMC.  
 
 ### ECU Connector Cable
 
@@ -94,7 +93,8 @@ There 3 jumpers are designed for switching boot device between Micro SD and EMMC
 
 There is a 64M QSPI flash on board which is reserved for boot and non-volatile data storage. It could be used for storage of data which user requires not to be erased during re flashing of system image. 
 
-To boot from QSPI flash, "DIP switch" should be set as: 3 & 7 ON, others OFF.
+To boot from QSPI flash, "SW1" should be set as: OFF.  
+Please refer to : [Boot from QSPI](Pcu_setup.md#flash-emmc) 
 
 This flash is formatted into two blocks as below:
 
@@ -118,13 +118,13 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 The size of internal EMMC storage is 64GB. 
 
-To boot from EMMC, "DIP switch" should be set as: 3 ON, others OFF, "Jmp 1-3" should be set as: Short pin 1 to pin 2.
+To boot from EMMC, "SW1" should be set as: OFF.
 
 ### External SD
 
 The minimum recommended card size is 64GB, and the speed should be at least class 10 A1, it is strongly recommended to use high speed SD card, e.g. class U3, A2. 
 
-To boot from SD card, "DIP switch" should be set as: 3 ON, others OFF, "Jmp 1-3" should be set as: Short pin 2 to pin 3.
+To boot from SD card, "SW1" should be set as: ON, and SD card should be plugged in.
 
 For blank SD card, the system image need to be flashed first using another PC. Please refer to [Flash Base MPU image](Pcu_setup.md#flash-base-mpu-image) .
 
