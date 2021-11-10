@@ -12,7 +12,6 @@
     - [PCU Interfaces Top View](#pcu-interfaces-top-view)
     - [Interfaces List](#interfaces-list)
       - [RJ45 1-4](#rj45-1-4)
-      - [DIP switch](#dip-switch)
       - [SW1](#sw1)
     - [ECU Connector Cable](#ecu-connector-cable)
   - [Boot Devices](#boot-devices)
@@ -72,11 +71,6 @@ The four RJ45 jack are for internal/external Ethernet connection.
 To connect to PCU board, please use RJ45 2/3/4. While for Internet access from PCU, please connect the PCU to router from RJ45 1.
 
 For more information about network settings, please go to : [Connect from PC](Pcu_setup.md#connect-from-pc)
-
-#### DIP switch
-
-- Boot from QSPI: switch 3 & 7 ON, others OFF.
-- Boot from EMMC/SD: switch 3 ON, others OFF.
 
 #### SW1
 
