@@ -16,7 +16,7 @@
 
 ![PCU Dev board](images/Pcu_top_view.png "PCU Dev board")
 
-PCU (Perception computer unit) Dev Board v2.0, designed by AutoCore under 96Boards open standard, is a development board for automotive applications as high-performance domain controller designed by AutoCore. PCU board integrates a lock-step MCU and an high performance MPU with it. Based on the MCU-MPU architecture, different ADAS / AD or relevant functions can be integrated with different functional safety levels up to ASIL D after ISO 26262. A wide variety of interfaces are provided to support vehicle networks connection, sensors and peripherals. Additional hardware accelerator could be connected via PCIe with additional computing power.
+PCU Dev Board v2.0, designed by AutoCore under 96Boards open standard, is a development board for automotive applications such as high-performance domain controller or vehicle centural gateway. PCU board integrates a lock-step MCU and a high performance MPU with it. Based on the MCU-MPU architecture, different ADAS / AD or relevant functionalities can be integrated with different functional safety levels up to ASIL D after ISO 26262. A wide variety of interfaces are provided to support vehicle networks connection, sensors and peripherals. Additional hardware accelerator could be connected via PCIe with additional computing power.
 
 ## Hardware
 | Item           | Description   |
