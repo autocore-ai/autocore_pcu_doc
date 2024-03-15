@@ -175,16 +175,25 @@ The on-board EMMC size is 64GB. Be sure to connect Jmp 1-3 to right position (1-
     The default user name for QSPI system is `root`.
 
 3. Install from USB
-
-    `sudo gzip -dc  /run/media/sda1/autocore-1046-ubuntu-20.04-emmc-pcu2.0-sw0.5.0-20201210.gz |sudo dd of=/dev/mmcblk0`  
-     or
-     
+    
     ```bash
-     ...
-     step 1: flex-installer -i pf -d /dev/mmcblk0
-     step 2: cd /run/media/mmcblk0p3 download bootpartition_<arch>_<version>.tgz and rootfs_ubuntu_<version>.tgz to this partition
-     step 3: flex-installer -b bootpartition_<arch>_<version>.tgz -r rootfs_ubuntu_<version>.tgz -f firmware_ls1046ardb_uboot_sdboot.img -d /dev/mmcblk0
-     ...
+     #step 1: 
+     # Unzip the archive to your USB drive and run the scipt
+     cd /run/media/PATH_TO_USBDRIVE
+     source ./setup.env
+
+     #step 2: 
+     flex-installer -i pf -d /dev/mmcblk0
+
+     # step 3: 
+     cd /run/media/mmcblk0p3
+     # move the following files to this path
+     # - bootpartition_<arch>_<version>.tgz
+     # - rootfs_<OS>_<version>.tgz
+     # - firmware_ls1046ardb_uboot_sdboot.img
+     
+     # step 4: 
+     flex-installer -b bootpartition_<arch>_<version>.tgz -r rootfs_<OS>_<version>.tgz -f firmware_ls1046ardb_uboot_sdboot.img -d /dev/mmcblk0
      ```
 
 #### Flash SD card
