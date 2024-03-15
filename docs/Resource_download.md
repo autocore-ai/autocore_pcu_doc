@@ -41,7 +41,7 @@ For more information about the features of the image, please go to: [PCU Specifi
 
 | Version   | Notes     | Link |
 | :-------: | --------- | ---- |
-|**0.5.0** <br> 15/Mar/2023| 1.PCU2.0 support <br> 2.4 Channel Eth-CAN support <br> 3.Change flash method from flexbuild to dd  | [autocore-1046-ubuntu20.04-emmc-pcu2.0-sw0.5.0-20201210](https://mega.nz/folder/Gv4ghCwT#icz3xgfPDNcGPMyJNoaRgA/file/jvpmALJR) <br> Md5: 7914a8adf1da3ba3573c43bc5bcfe8df |
+|**0.5.0** <br> 15/Mar/2023| 1.PCU2.0 support <br> 2.4 Channel Eth-CAN support <br> 3.Change flash method from flexbuild to dd  | [autocore-1046-ubuntu20.04-emmc-pcu2.0-sw0.5.0-20201210](https://mega.nz/folder/Y311lJiR#FFUO6TWve7cEehOjCf8kFA/file/0ztUzKbR) <br> Md5: ff09f46d408aff63cdd8284ceade9d8b |
 |**0.4.0** <br> 10/Dec/2020| 1.Update to Ubuntu 20.04 <br> 2. Add ptp server service <br> 3.ROS-foxy-desktop support | [autocore-mpu-ubuntu20.04-emmc-pcu1.0-sw0.4.0-20201210](https://mega.nz/folder/Gv4ghCwT#icz3xgfPDNcGPMyJNoaRgA/file/PzoWQJZD) <br> Md5: 73d1c48643eff146c96c195a53e0509b |
 |**0.3** <br> 16/Apr/2020| Minor fixes   | [autocore-mpu-ubuntu-emmc-18.04-0.3-20200416](https://drive.google.com/file/d/1FJnRPxh_mpJ7Qoy2i9k5hi4OsfF1ZuDE/view) <br> Md5: b3e2e121eb18157e623b69ed2402ad3b|
 |**0.2** <br> 16/Jan/2020| 1. Add EMMC support <br> 2. PCIe driver | [autocore-mpu-ubuntu18.04-0.2-20200116](https://drive.google.com/file/d/1Pl5UcRnBJ83lGZ8qg7_hdLSfWDwRtLyV/view) <br> Md5: 1607ec26dae2653b6f02f7e80107161d|
