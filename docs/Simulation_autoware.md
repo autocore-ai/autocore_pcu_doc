@@ -43,7 +43,14 @@ $ . run.sh --ros-distro melodic --tag-prefix 1.14.0-alpha.1 --cuda off --image a
 
 ## Simulation Step by step
 
+You could follow this video to run simulation on PCU dev board:  
+[Run Autoware Simulation on PCU](https://mega.nz/folder/lqEWERgT#_Hj66viyNp8R6778MsOnpg/file/wm9gFJDR)
+
+
 1. Launch Autoware 1.14 runtime manager at PCU board. 
+
+   > NOTE: Autoware runtime manager requires GUI, so Linux desktop environments(e.g. xfce) and remote desktop(e.g. xrdp) software shall be installed on PCU firstly. The following command shall be executed on PCU desktop environment.   
+
    ```bash
    source /opt/ros/melodic/setup.bash  
    source  Autoware/install/setup.bash  
